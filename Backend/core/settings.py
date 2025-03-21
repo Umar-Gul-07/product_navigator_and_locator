@@ -51,13 +51,11 @@ INSTALLED_APPS = [
 
     # REST Framework for API Authentication
     'rest_framework',
-    'allauth.socialaccount.providers.google', \
 
     # CUSTOM APPLICATIONS
     'src.api',
     'src.core',
-    'src.services.movies',
-    'src.services.bookings',
+    'src.services.products',
 ]
 
 MIDDLEWARE = [

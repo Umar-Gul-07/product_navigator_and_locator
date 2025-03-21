@@ -2,9 +2,9 @@ from django.apps import AppConfig
 
 
 class CoreConfig(AppConfig):
-    name = 'src.services.bookings'
-    verbose_name = 'Bookings'
-    verbose_plural = 'Bookings'
+    name = 'src.services.products'
+    verbose_name = 'Products'
+    verbose_plural = 'Products'
     default_auto_config = 'django.db.models.BigAutoField'
 
     # def ready(self):

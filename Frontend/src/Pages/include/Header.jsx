@@ -2,6 +2,270 @@
 function Header() {
     return (
         <>
+
+            <div
+                className="header-cate-model main-gambo-model modal fade"
+                id="category_model"
+                tabIndex={-1}
+                role="dialog"
+                aria-modal="false"
+            >
+                <div className="modal-dialog category-area" role="document">
+                    <div className="category-area-inner">
+                        <div className="modal-header">
+                            <button
+                                type="button"
+                                className="close btn-close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <i className="uil uil-multiply" />
+                            </button>
+                        </div>
+                        <div className="category-model-content modal-content">
+                            <div className="cate-header">
+                                <h4>Select Category</h4>
+                            </div>
+                            <ul className="category-by-cat">
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-1.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Fruits and Vegetables </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-2.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Grocery &amp; Staples </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-3.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Dairy &amp; Eggs </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-4.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Beverages </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-5.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Snacks </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-6.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Home Care </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-7.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Noodles &amp; Sauces </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-8.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Personal Care </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" className="single-cat-item">
+                                        <div className="icon">
+                                            <img src="images/category/icon-9.svg" alt="" />
+                                        </div>
+                                        <div className="text"> Pet Care </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" className="morecate-btn">
+                                <i className="uil uil-apps" />
+                                More Categories
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div
+                className="offcanvas offcanvas-end"
+                tabIndex={-1}
+                id="offcanvasRight"
+                aria-labelledby="offcanvasRightLabel"
+            >
+                <div className="offcanvas-header bs-canvas-header side-cart-header p-3">
+                    <div className="d-inline-block main-cart-title" id="offcanvasRightLabel">
+                        My Cart <span>(2 Items)</span>
+                    </div>
+                    <button
+                        type="button"
+                        className="close-btn"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                    >
+                        <i className="uil uil-multiply" />
+                    </button>
+                </div>
+                <div className="offcanvas-body p-0">
+                    <div className="cart-top-total p-4">
+                        <div className="cart-total-dil">
+                            <h4>Gambo Super Market</h4>
+                            <span>$34</span>
+                        </div>
+                        <div className="cart-total-dil pt-2">
+                            <h4>Delivery Charges</h4>
+                            <span>$1</span>
+                        </div>
+                    </div>
+                    <div className="side-cart-items">
+                        <div className="cart-item">
+                            <div className="cart-product-img">
+                                <img src="images/product/img-1.jpg" alt="" />
+                                <div className="offer-badge">6% OFF</div>
+                            </div>
+                            <div className="cart-text">
+                                <h4>Product Title Here</h4>
+                                <div className="cart-radio">
+                                    <ul className="kggrm-now">
+                                        <li>
+                                            <input type="radio" id="a1" name="cart1" />
+                                            <label htmlFor="a1">0.50</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="a2" name="cart1" />
+                                            <label htmlFor="a2">1kg</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="a3" name="cart1" />
+                                            <label htmlFor="a3">2kg</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="a4" name="cart1" />
+                                            <label htmlFor="a4">3kg</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="qty-group">
+                                    <div className="quantity buttons_added">
+                                        <input
+                                            type="button"
+                                            defaultValue="-"
+                                            className="minus minus-btn"
+                                        />
+                                        <input
+                                            type="number"
+                                            step={1}
+                                            name="quantity"
+                                            defaultValue={1}
+                                            className="input-text qty text"
+                                        />
+                                        <input type="button" defaultValue="+" className="plus plus-btn" />
+                                    </div>
+                                    <div className="cart-item-price">
+                                        $10 <span>$15</span>
+                                    </div>
+                                </div>
+                                <button type="button" className="cart-close-btn">
+                                    <i className="uil uil-multiply" />
+                                </button>
+                            </div>
+                        </div>
+                        <div className="cart-item">
+                            <div className="cart-product-img">
+                                <img src="images/product/img-2.jpg" alt="" />
+                                <div className="offer-badge">6% OFF</div>
+                            </div>
+                            <div className="cart-text">
+                                <h4>Product Title Here</h4>
+                                <div className="cart-radio">
+                                    <ul className="kggrm-now">
+                                        <li>
+                                            <input type="radio" id="a5" name="cart2" />
+                                            <label htmlFor="a5">0.50</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="a6" name="cart2" />
+                                            <label htmlFor="a6">1kg</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="a7" name="cart2" />
+                                            <label htmlFor="a7">2kg</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="qty-group">
+                                    <div className="quantity buttons_added">
+                                        <input
+                                            type="button"
+                                            defaultValue="-"
+                                            className="minus minus-btn"
+                                        />
+                                        <input
+                                            type="number"
+                                            step={1}
+                                            name="quantity"
+                                            defaultValue={1}
+                                            className="input-text qty text"
+                                        />
+                                        <input type="button" defaultValue="+" className="plus plus-btn" />
+                                    </div>
+                                    <div className="cart-item-price">
+                                        $24 <span>$30</span>
+                                    </div>
+                                </div>
+                                <button type="button" className="cart-close-btn">
+                                    <i className="uil uil-multiply" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="offcanvas-footer">
+                    <div className="cart-total-dil saving-total ">
+                        <h4>Total Saving</h4>
+                        <span>$11</span>
+                    </div>
+                    <div className="main-total-cart">
+                        <h2>Total</h2>
+                        <span>$35</span>
+                    </div>
+                    <div className="checkout-cart">
+                        <a href="#" className="promo-code">
+                            Have a promocode?
+                        </a>
+                        <a href="checkout.html" className="cart-checkout-btn hover-btn">
+                            Proceed to Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
             <header className="header clearfix">
                 <div className="top-header-group">
                     <div className="top-header">

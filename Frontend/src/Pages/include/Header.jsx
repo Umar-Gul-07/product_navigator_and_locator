@@ -1,350 +1,385 @@
-import React, {useContext, useEffect, useRef, useState} from "react";
-import {Link, useLocation} from "react-router-dom";
-import {Store} from "../../Utils/Store";
 
 function Header() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const modalRef = useRef(null); // Updated to use useRef instead of createRef
-
-    const location = useLocation(); // React Router hook to get the current URL
-
-    // Handle opening and closing the modal
-    const toggleModal = () => {
-        setIsModalOpen(!isModalOpen);
-    };
-
-    // Use useEffect to automatically handle modal state based on the URL change
-    useEffect(() => {
-        // Open modal automatically when the URL changes
-        setIsModalOpen(false);
-    }, [location]); // This will trigger when the location (URL) changes
-
-    // Use useEffect to apply and remove the body classes when the modal is opened/closed
-    useEffect(() => {
-        const bodyElement = document.body;
-
-        if (isModalOpen) {
-            // Ensure the modal element exists before trying to manipulate it
-            const modalElement = modalRef.current;
-            if (modalElement) {
-                const modal = new window.bootstrap.Modal(modalElement);
-                modal.show();
-            }
-
-            // Add modal-open class and inline styles to the body
-            bodyElement.classList.add('modal-open');
-            bodyElement.style.overflow = 'hidden';
-            bodyElement.style.paddingRight = '0px';
-            bodyElement.setAttribute('data-bs-overflow', 'visible');
-        } else {
-            // Remove the modal-open class and inline styles when the modal is closed
-            const modalElement = modalRef.current;
-            if (modalElement) {
-                const modal = window.bootstrap.Modal.getInstance(modalElement);
-                if (modal) {
-                    modal.hide();
-                }
-            }
-
-            bodyElement.classList.remove('modal-open');
-            bodyElement.style.overflow = '';
-            bodyElement.style.paddingRight = '';
-            bodyElement.removeAttribute('data-bs-overflow');
-        }
-
-        // Clean up when the component unmounts or state changes
-        return () => {
-            bodyElement.classList.remove('modal-open');
-            bodyElement.style.overflow = '';
-            bodyElement.style.paddingRight = '';
-            bodyElement.removeAttribute('data-bs-overflow');
-        };
-    }, [isModalOpen]);
-    const {state} = useContext(Store)
-    const {ContactInfo, Cart} = state
     return (
         <>
-            {isModalOpen ?
-                <div className="offcanvas__area">
-                    <div
-                        className="modal fade show"
-                        id="offcanvasmodal"
-                        style={{display: "block"}}
-                        aria-modal="true"
-                        role="dialog"
-                    >
-
+            <header className="header clearfix">
+                <div className="top-header-group">
+                    <div className="top-header">
+                        <div className="main_logo" id="logo">
+                            <a href="index.html">
+                                <img src="images/logo.svg" alt="" />
+                            </a>
+                            <a href="index.html">
+                                <img className="logo-inverse" src="images/dark-logo.svg" alt="" />
+                            </a>
+                        </div>
+                        <div className="search120">
+                            <div className="header_search position-relative">
+                                <input
+                                    className="prompt srch10"
+                                    type="text"
+                                    placeholder="Search for products.."
+                                />
+                                <i className="uil uil-search s-icon" />
+                            </div>
+                        </div>
+                        <div className="header_right">
+                            <ul>
+                                <li>
+                                    <a href="#" className="offer-link">
+                                        <i className="uil uil-phone-alt" />
+                                        1800-000-000
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="offers.html" className="offer-link">
+                                        <i className="uil uil-gift" />
+                                        Offers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="faq.html" className="offer-link">
+                                        <i className="uil uil-question-circle" />
+                                        Help
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="dashboard_my_wishlist.html"
+                                        className="option_links"
+                                        title="Wishlist"
+                                    >
+                                        <i className="uil uil-heart icon_wishlist" />
+                                        <span className="noti_count1">3</span>
+                                    </a>
+                                </li>
+                                <li className="dropdown account-dropdown">
+                                    <a
+                                        href="#"
+                                        className="opts_account"
+                                        role="button"
+                                        id="accountClick"
+                                        data-bs-auto-close="outside"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        <img src="images/avatar/img-5.jpg" alt="" />
+                                        <span className="user__name">John Doe</span>
+                                        <i className="uil uil-angle-down" />
+                                    </a>
+                                    <div
+                                        className="dropdown-menu dropdown-menu-account dropdown-menu-end"
+                                        aria-labelledby="accountClick"
+                                        data-bs-popper="none"
+                                    >
+                                        <div className="night_mode_switch__btn">
+                                            <a href="#" id="night-mode" className="btn-night-mode">
+                                                <i className="uil uil-moon" /> Night mode
+                                                <span className="btn-night-mode-switch">
+                                                    <span className="uk-switch-button" />
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <a href="dashboard_overview.html" className="channel_item">
+                                            <i className="uil uil-apps icon__1" />
+                                            Dashbaord
+                                        </a>
+                                        <a href="dashboard_my_orders.html" className="channel_item">
+                                            <i className="uil uil-box icon__1" />
+                                            My Orders
+                                        </a>
+                                        <a href="dashboard_my_wishlist.html" className="channel_item">
+                                            <i className="uil uil-heart icon__1" />
+                                            My Wishlist
+                                        </a>
+                                        <a href="dashboard_my_wallet.html" className="channel_item">
+                                            <i className="uil uil-usd-circle icon__1" />
+                                            My Wallet
+                                        </a>
+                                        <a href="dashboard_my_addresses.html" className="channel_item">
+                                            <i className="uil uil-location-point icon__1" />
+                                            My Address
+                                        </a>
+                                        <a href="offers.html" className="channel_item">
+                                            <i className="uil uil-gift icon__1" />
+                                            Offers
+                                        </a>
+                                        <a href="faq.html" className="channel_item">
+                                            <i className="uil uil-info-circle icon__1" />
+                                            Faq
+                                        </a>
+                                        <a href="sign_in.html" className="channel_item">
+                                            <i className="uil uil-lock-alt icon__1" />
+                                            Logout
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                : null}
-
-            <div className="modal fade" ref={modalRef} tabIndex="-1" id="offcanvasmodal"
-                 aria-labelledby="offcanvasLabel">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-
-                        </div>
-                        <div className="modal-dialog">
-                            <div className="modal-content">
-                                <div className="offcanvas__wrapper">
-                                    <div className="offcanvas__content">
-                                        <div
-                                            className="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
-                                            <div className="offcanvas__logo logo">
-                                                <Link to="/">
-                                                    <img width="100px" src="assets/img/logo-5.png" alt="logo"/>
-                                                </Link>
-                                            </div>
-                                            <div className="offcanvas__close">
-                                                <button type="button" className="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"
-                                                        onClick={toggleModal}></button>
-                                            </div>
+                <div className="sub-header-group">
+                    <div className="sub-header">
+                        <nav className="navbar navbar-expand-lg bg-gambo gambo-head navbar justify-content-lg-start pt-0 pb-0">
+                            <button
+                                className="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar"
+                                aria-controls="offcanvasNavbar"
+                            >
+                                <span className="navbar-toggler-icon">
+                                    <i className="uil uil-bars" />
+                                </span>
+                            </button>
+                            <a
+                                href="#"
+                                className="category_drop hover-btn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#category_model"
+                                title="Categories"
+                            >
+                                <i className="uil uil-apps" />
+                                <span className="cate__icon">Select Category</span>
+                            </a>
+                            <div
+                                className="offcanvas offcanvas-start"
+                                tabIndex={-1}
+                                id="offcanvasNavbar"
+                                aria-labelledby="offcanvasNavbarLabel"
+                            >
+                                <div className="offcanvas-header">
+                                    <div className="offcanvas-logo" id="offcanvasNavbarLabel">
+                                        <img src="images/dark-logo-1.svg" alt="" />
+                                    </div>
+                                    <button
+                                        type="button"
+                                        className="close-btn"
+                                        data-bs-dismiss="offcanvas"
+                                        aria-label="Close"
+                                    >
+                                        <i className="uil uil-multiply" />
+                                    </button>
+                                </div>
+                                <div className="offcanvas-body">
+                                    <div className="offcanvas-category mb-4 d-block d-lg-none">
+                                        <div className="offcanvas-search position-relative">
+                                            <input
+                                                className="canvas_search"
+                                                type="text"
+                                                placeholder="Search for products.."
+                                            />
+                                            <i className="uil uil-search hover-btn canvas-icon" />
                                         </div>
-                                        <div className="bd-utilize__buttons mb-25 d-xl-none">
-                                            <div className="bd-action__item">
-                                                <div className="bd-action__cart">
-                                                    <div className="bd-action__cart-icon">
-                                                        <Link
-                                                            to="/add-to-cart"
-                                                        >
-                                                            <svg
-                                                                id="shopping-bag-52145456"
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                width="16.508"
-                                                                height="18.5"
-                                                                viewBox="0 0 16.508 18.5"
-                                                            >
-                                                                <path
-                                                                    id="Path_7655"
-                                                                    data-name="Path 76"
-                                                                    d="M24.21,35.5H34.3a3.214,3.214,0,0,0,3.21-3.21v-9.6a.571.571,0,0,0-.569-.569H33.523v-.854a4.269,4.269,0,0,0-8.538,0v.854H21.569a.571.571,0,0,0-.569.569v9.6A3.214,3.214,0,0,0,24.21,35.5Zm1.913-14.231a3.131,3.131,0,0,1,6.262,0v.854H26.123Zm-3.985,1.992h2.846v1.423a.569.569,0,0,0,1.138,0V23.262h6.262v1.423a.569.569,0,0,0,1.138,0V23.262h2.846V32.29A2.076,2.076,0,0,1,34.3,34.362H24.21a2.076,2.076,0,0,1-2.072-2.072Z"
-                                                                    transform="translate(-21 -17)"
-                                                                    fill="#1c1d1b"
-                                                                />
-                                                            </svg>
-                                                        </Link>
-                                                        <span className="bd-action__item-number cart-count">0</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div className="mobile-menu fix mb-40 mean-container">
-                                            <div className="mean-bar">
-                                                <a
-                                                    href="#nav"
-                                                    className="meanmenu-reveal"
-                                                    style={{right: 0, left: "auto", display: "inline"}}
-                                                >
-                  <span>
-                    <span>
-                      <span/>
-                    </span>
-                  </span>
-                                                </a>
-                                                <nav className="mean-nav">
-                                                    <ul>
-                                                        <li>
-                                                            <Link to="/">Home</Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="/shop">Shop</Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="/blogs">Blogs</Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="/about">About</Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link to="/contact">Contact</Link>
-                                                        </li>
-                                                    </ul>
-                                                </nav>
-                                            </div>
-                                        </div>
-
-                                        <div className="offcanvas__contact mt-30 mb-20">
-                                            <h4>Contact Info</h4>
-                                            <ul>
-                                                <li className="d-flex align-items-center">
-                                                    <div className="offcanvas__contact-icon mr-15">
-                                                        <i className="fal fa-map-marker-alt"/>
-                                                    </div>
-                                                    <div className="offcanvas__contact-text">
-                                                        <a
-                                                            target="_blank"
-                                                            href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873"
-                                                        >
-                                                            {ContactInfo.address}
-                                                        </a>
-                                                    </div>
+                                        <button
+                                            className="category_drop_canvas hover-btn mt-4"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#category_model"
+                                            title="Categories"
+                                        >
+                                            <i className="uil uil-apps" />
+                                            <span className="cate__icon">Select Category</span>
+                                        </button>
+                                    </div>
+                                    <ul className="navbar-nav justify-content-start flex-grow-1 pe_5">
+                                        <li className="nav-item">
+                                            <a
+                                                className="nav-link active"
+                                                aria-current="page"
+                                                href="index.html"
+                                            >
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="nav-link" href="shop_grid.html">
+                                                New Products
+                                            </a>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="nav-link" href="shop_grid.html">
+                                                Featured Products
+                                            </a>
+                                        </li>
+                                        <li className="nav-item dropdown">
+                                            <a
+                                                className="nav-link dropdown-toggle"
+                                                href="#"
+                                                role="button"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                            >
+                                                Blog
+                                            </a>
+                                            <ul className="dropdown-menu dropdown-submenu">
+                                                <li>
+                                                    <a className="dropdown-item" href="our_blog.html">
+                                                        Our Blog
+                                                    </a>
                                                 </li>
-                                                <li className="d-flex align-items-center">
-                                                    <div className="offcanvas__contact-icon mr-15">
-                                                        <i className="far fa-phone"/>
-                                                    </div>
-                                                    <div className="offcanvas__contact-text">
-                                                        <a href={`tel:${ContactInfo.contact_phone}`}>{ContactInfo.contact_phone}</a>
-                                                    </div>
+                                                <li>
+                                                    <a className="dropdown-item" href="blog_no_sidebar.html">
+                                                        Our Blog Two No Sidebar
+                                                    </a>
                                                 </li>
-                                                <li className=" d-flex align-items-center">
-                                                    <div className=" offcanvas__contact-icon mr-15">
-                                                        <i className=" fal fa-envelope"/>
-                                                    </div>
-                                                    <div className=" offcanvas__contact-text">
-                                                        <a href=" tel:+012-345-6789">
-                                                    <span className={`mailto:{ContactInfo.contact_email}`}>
-                        {ContactInfo.contact_email}
-                      </span>
-                                                        </a>
-                                                    </div>
+                                                <li>
+                                                    <a className="dropdown-item" href="blog_left_sidebar.html">
+                                                        Our Blog with Left Sidebar
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="blog_right_sidebar.html">
+                                                        Our Blog with Right Sidebar
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="blog_detail_view.html">
+                                                        Blog Detail View
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        className="dropdown-item"
+                                                        href="blog_left_sidebar_single_view.html"
+                                                    >
+                                                        Blog Detail View with Sidebar
+                                                    </a>
                                                 </li>
                                             </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <header>
-                <div className="bd-topbar-area__middle d-none d-lg-block mt-5">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-xxl-6 col-xl-6 col-md-8">
-                                <div className="bd-topbar__contact">
-                                    <ul>
-                                        <li>
-                                            <Link to={`tel:${ContactInfo.contact_phone}`}>
-                                                <i className="fa-regular fa-phone-flip"/>
-                                                {ContactInfo.contact_phone}
-                                            </Link>
                                         </li>
-                                        <li>
-                                            <Link>
-                                                <i className="fa-regular fa-house-window"/>
-                                                {ContactInfo.address}
-                                            </Link>
+                                        <li className="nav-item dropdown">
+                                            <a
+                                                className="nav-link dropdown-toggle"
+                                                href="#"
+                                                role="button"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false"
+                                            >
+                                                Pages
+                                            </a>
+                                            <ul className="dropdown-menu dropdown-submenu">
+                                                <li>
+                                                    <a className="dropdown-item" href="dashboard_overview.html">
+                                                        Account
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="about_us.html">
+                                                        About Us
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="shop_grid.html">
+                                                        Online Shop
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        className="dropdown-item"
+                                                        href="single_product_view.html"
+                                                    >
+                                                        Single Product View
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="checkout.html">
+                                                        Checkout
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="request_product.html">
+                                                        Product Request
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="order_placed.html">
+                                                        Order Placed
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="bill.html">
+                                                        Bill Slip
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="job_detail_view.html">
+                                                        Job Detail View
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="sign_in.html">
+                                                        Sign In
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="sign_up.html">
+                                                        Sign Up
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a className="dropdown-item" href="forgot_password.html">
+                                                        Forgot Password
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a className="nav-link" href="contact_us.html">
+                                                Contact Us
+                                            </a>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="header-sticky" className="">
-                    <div className="bd-header__area-2 position-relative">
-                        <div className="container">
-                            <div className="bd-header__main-wrapper-2">
-                                <div className="row align-items-center">
-                                    <div className="col-12">
-                                        <div className="bd-header__main-content">
-                                            <div className="bd-header__left-2">
-                                                <div className="bd-header__logo-2 p-relative">
-                                                    <Link to="/">
-                                                        <img width="100px" src="assets/img/logo-5.png" alt="logo"/>
-                                                    </Link>
-                                                </div>
-                                                <div className="main-menu d-none d-none d-lg-block">
-                                                    <nav id="mobile-menu" style={{display: "block"}}>
-                                                        <ul>
-                                                            <li>
-                                                                <Link to="/">Home</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/shop">Shop</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/blogs">Blogs</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/about">About</Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link to="/contact">Contact</Link>
-                                                            </li>
-                                                        </ul>
-                                                    </nav>
-                                                </div>
-                                            </div>
-                                            <div className="bd-header__right header__right-2">
-                                                <div className="bd-action__cart-list justify-content-end">
-                                                    <div className="bd-action__item">
-                                                        <div className="bd-action__cart">
-                                                            <div className="bd-action__cart-icon">
-                                                                <Link
-                                                                    to="/add-to-cart"
-                                                                >
-                                                                    <svg
-                                                                        id="shopping-bag-52145456"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        width="16.508"
-                                                                        height="18.5"
-                                                                        viewBox="0 0 16.508 18.5"
-                                                                    >
-                                                                        <path
-                                                                            id="Path_7655"
-                                                                            data-name="Path 76"
-                                                                            d="M24.21,35.5H34.3a3.214,3.214,0,0,0,3.21-3.21v-9.6a.571.571,0,0,0-.569-.569H33.523v-.854a4.269,4.269,0,0,0-8.538,0v.854H21.569a.571.571,0,0,0-.569.569v9.6A3.214,3.214,0,0,0,24.21,35.5Zm1.913-14.231a3.131,3.131,0,0,1,6.262,0v.854H26.123Zm-3.985,1.992h2.846v1.423a.569.569,0,0,0,1.138,0V23.262h6.262v1.423a.569.569,0,0,0,1.138,0V23.262h2.846V32.29A2.076,2.076,0,0,1,34.3,34.362H24.21a2.076,2.076,0,0,1-2.072-2.072Z"
-                                                                            transform="translate(-21 -17)"
-                                                                            fill="#1c1d1b"
-                                                                        />
-                                                                    </svg>
-                                                                </Link>
-                                                                <span
-                                                                    className="bd-action__item-number cart-count">{Cart.length}</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="bd-action__hotline d-none d-xl-block">
-                                                    <div className="bd-hotline__inner">
-                                                        <div className="bd-hotline__icon">
-                                                            <img
-                                                                src="assets/img/icon/action-hotline.png"
-                                                                alt="hotline-icon"
-                                                            />
-                                                        </div>
-                                                        <div className="bd-hotline__text">
-                                                            <span>Contact hotline</span>
-                                                            <Link
-                                                                to={`tel:${ContactInfo.contact_phone}`}>{ContactInfo.contact_phone}</Link>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="header__hamburger d-flex d-xl-none">
-                                                    <button
-                                                        type="button"
-                                                        className="hamburger-btn"
-                                                        onClick={toggleModal} // Toggle modal state on click
-                                                    >
-        <span className="hamburger-icon">
-          <span/>
-          <span/>
-          <span/>
-        </span>
-                                                    </button>
-
-                                                </div>
-                                            </div>
+                                    <div className="d-block d-lg-none">
+                                        <ul className="offcanvas-help-links">
+                                            <li>
+                                                <a href="#" className="offer-link">
+                                                    <i className="uil uil-phone-alt" />
+                                                    1800-000-000
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="offers.html" className="offer-link">
+                                                    <i className="uil uil-gift" />
+                                                    Offers
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="faq.html" className="offer-link">
+                                                    <i className="uil uil-question-circle" />
+                                                    Help
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div className="offcanvas-copyright">
+                                            <i className="uil uil-copyright" />
+                                            Copyright 2022 <b>Gambolthemes</b> . All rights reserved
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div className="sub_header_right">
+                                <div className="header_cart">
+                                    <a
+                                        href="#"
+                                        className="cart__btn hover-btn"
+                                        data-bs-toggle="offcanvas"
+                                        data-bs-target="#offcanvasRight"
+                                        aria-controls="offcanvasRight"
+                                    >
+                                        <i className="uil uil-shopping-cart-alt" />
+                                        <span>Cart</span>
+                                        <ins>2</ins>
+                                        <i className="uil uil-angle-down" />
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
                     </div>
                 </div>
             </header>
+
         </>
     )
-        ;
 }
 
 export default Header;

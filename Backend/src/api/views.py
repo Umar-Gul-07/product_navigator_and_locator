@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from ..core.forms import ContactForm
 from rest_framework import generics
-from ..core.models import ContactMessage
-from .serializers import ContactMessageSerializer, ProductSerializer
+from ..core.models import ContactMessage, Branch
+from .serializers import ContactMessageSerializer, ProductSerializer, BranchSerializer
 from django.views.generic import ListView
 from ..services.products.models import Product
 
@@ -32,3 +32,11 @@ class ContactMessageListCreateAPIView(generics.ListCreateAPIView):
 class ProductListView(generics.ListAPIView):  
     queryset = Product.objects.all()  
     serializer_class = ProductSerializer 
+    
+
+class BranchListAPIView(generics.ListAPIView):
+    """
+    API view to retrieve a list of branches.
+    """
+    queryset = Branch.objects.all()
+    serializer_class = BranchSerializer

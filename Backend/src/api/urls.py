@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import contact_view, ContactMessageListCreateAPIView, ProductListView
+from .views import contact_view, ContactMessageListCreateAPIView, ProductListView, BranchListAPIView
 
 urlpatterns = [
     # Authentication routes
@@ -13,4 +13,5 @@ urlpatterns = [
 
     # Product API Route (Updated for consistency)
     path('api/products/', ProductListView.as_view(), name='product-list'), 
+    path('api/branches/', BranchListAPIView.as_view(), name='branch-list'),
 ]

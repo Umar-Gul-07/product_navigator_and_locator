@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models import (
-    Country, Application, GalleryForm
+    Country, Application, GalleryForm, Branch
 )
 
 
@@ -27,3 +27,10 @@ class ContactMessageAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'subject')
     list_filter = ('subject', 'created_at')
 
+
+
+@admin.register(Branch)
+class BranchAdmin(admin.ModelAdmin):
+    list_display = ('name', 'address', 'phone', 'rating', 'status')
+    search_fields = ('name', 'address', 'phone')
+    list_filter = ('status',)

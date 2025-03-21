@@ -3,7 +3,9 @@ from django.contrib import messages
 from ..core.forms import ContactForm
 from rest_framework import generics
 from ..core.models import ContactMessage
-from .serializers import ContactMessageSerializer
+from .serializers import ContactMessageSerializer, ProductSerializer
+from django.views.generic import ListView
+from ..services.products.models import Product
 
 def contact_view(request):
     """
@@ -25,3 +27,8 @@ def contact_view(request):
 class ContactMessageListCreateAPIView(generics.ListCreateAPIView):
     queryset = ContactMessage.objects.all()
     serializer_class = ContactMessageSerializer
+    
+    
+class ProductListView(generics.ListAPIView):  
+    queryset = Product.objects.all()  
+    serializer_class = ProductSerializer 

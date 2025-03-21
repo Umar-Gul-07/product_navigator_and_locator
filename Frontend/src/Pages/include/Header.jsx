@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -412,27 +413,28 @@ function Header() {
                                         <nav>
                                             <ul className="parent-nav">
                                                 <li className="parent has-dropdown">
-                                                    <a className="nav-link" href="#">
+                                                    <Link className="nav-link" to="/">
                                                         Home
-                                                    </a>
+                                                    </Link>
 
                                                 </li>
-                                                <li className="parent">
-                                                    <a href="about.html">About</a>
-                                                </li>
+                                               
                                                 <li className="parent with-megamenu">
-                                                    <a href="#">ProductList</a>
+                                                    <Link to="/product-list">ProductList</Link>
 
                                                 </li>
                                                 <li className="parent has-dropdown">
-                                                    <a className="nav-link" href="#">
+                                                    <Link className="nav-link" to="/branches">
                                                         Branches
-                                                    </a>
+                                                    </Link>
 
+                                                </li>
+                                                <li className="parent">
+                                                    <Link to="/about">About</Link>
                                                 </li>
 
                                                 <li className="parent">
-                                                    <a href="contact.html">Contact</a>
+                                                    <Link to="/contact">Contact</Link>
                                                 </li>
                                             </ul>
                                         </nav>

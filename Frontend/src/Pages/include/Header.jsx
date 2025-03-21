@@ -2,645 +2,1162 @@
 function Header() {
     return (
         <>
-
-            <div
-                className="header-cate-model main-gambo-model modal fade"
-                id="category_model"
-                tabIndex={-1}
-                role="dialog"
-                aria-modal="false"
-            >
-                <div className="modal-dialog category-area" role="document">
-                    <div className="category-area-inner">
-                        <div className="modal-header">
-                            <button
-                                type="button"
-                                className="close btn-close"
-                                data-dismiss="modal"
-                                aria-label="Close"
-                            >
-                                <i className="uil uil-multiply" />
-                            </button>
-                        </div>
-                        <div className="category-model-content modal-content">
-                            <div className="cate-header">
-                                <h4>Select Category</h4>
-                            </div>
-                            <ul className="category-by-cat">
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-1.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Fruits and Vegetables </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-2.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Grocery &amp; Staples </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-3.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Dairy &amp; Eggs </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-4.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Beverages </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-5.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Snacks </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-6.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Home Care </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-7.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Noodles &amp; Sauces </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-8.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Personal Care </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="single-cat-item">
-                                        <div className="icon">
-                                            <img src="images/category/icon-9.svg" alt="" />
-                                        </div>
-                                        <div className="text"> Pet Care </div>
-                                    </a>
-                                </li>
-                            </ul>
-                            <a href="#" className="morecate-btn">
-                                <i className="uil uil-apps" />
-                                More Categories
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div className="rts-header-one-area-one">
+                <div className="header-top-area">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="header-mid-wrapper-between">
+                                    <div className="nav-sm-left">
+                                        <ul className="nav-h_top" >
+                                            <li>
+                                                <a href="about.html" className="text-white">About Us</a>
+                                            </li>
 
 
-            <div
-                className="offcanvas offcanvas-end"
-                tabIndex={-1}
-                id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel"
-            >
-                <div className="offcanvas-header bs-canvas-header side-cart-header p-3">
-                    <div className="d-inline-block main-cart-title" id="offcanvasRightLabel">
-                        My Cart <span>(2 Items)</span>
-                    </div>
-                    <button
-                        type="button"
-                        className="close-btn"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                    >
-                        <i className="uil uil-multiply" />
-                    </button>
-                </div>
-                <div className="offcanvas-body p-0">
-                    <div className="cart-top-total p-4">
-                        <div className="cart-total-dil">
-                            <h4>Gambo Super Market</h4>
-                            <span>$34</span>
-                        </div>
-                        <div className="cart-total-dil pt-2">
-                            <h4>Delivery Charges</h4>
-                            <span>$1</span>
-                        </div>
-                    </div>
-                    <div className="side-cart-items">
-                        <div className="cart-item">
-                            <div className="cart-product-img">
-                                <img src="images/product/img-1.jpg" alt="" />
-                                <div className="offer-badge">6% OFF</div>
-                            </div>
-                            <div className="cart-text">
-                                <h4>Product Title Here</h4>
-                                <div className="cart-radio">
-                                    <ul className="kggrm-now">
-                                        <li>
-                                            <input type="radio" id="a1" name="cart1" />
-                                            <label htmlFor="a1">0.50</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" id="a2" name="cart1" />
-                                            <label htmlFor="a2">1kg</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" id="a3" name="cart1" />
-                                            <label htmlFor="a3">2kg</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" id="a4" name="cart1" />
-                                            <label htmlFor="a4">3kg</label>
-                                        </li>
-                                    </ul>
+                                        </ul>
+                                        <p className="para text-white">
+                                            We are open to your everyday from 7:00 to 22:00
+                                        </p>
+                                    </div>
+                                    <div className="nav-sm-left">
+                                        <ul className="nav-h_top language">
+                                            <li className="category-hover-header language-hover">
+                                                <a href="#" className="text-white " style={{ marginLeft: "end" }}> English</a>
+                                                <ul className="category-sub-menu">
+                                                    <li>
+                                                        <a href="#" className="menu-item">
+                                                            <span >Italian</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className="menu-item">
+                                                            <span>Russian</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className="menu-item">
+                                                            <span>Chinian</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li className="category-hover-header language-hover">
+                                                <a href="#" className="text-white">USD</a>
+                                                <ul className="category-sub-menu">
+                                                    <li>
+                                                        <a href="#" className="menu-item">
+                                                            <span>Rubol</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className="menu-item">
+                                                            <span>Rupi</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" className="menu-item">
+                                                            <span>Euro</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="trackorder.html" className="text-white">Track Order</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div className="qty-group">
-                                    <div className="quantity buttons_added">
-                                        <input
-                                            type="button"
-                                            defaultValue="-"
-                                            className="minus minus-btn"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="search-header-area-main">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="logo-search-category-wrapper">
+                                    <a href="index.html" className="logo-area">
+                                        <img
+                                            src="assets/images/logo/logo-01.svg"
+                                            alt="logo-main"
+                                            className="logo"
                                         />
-                                        <input
-                                            type="number"
-                                            step={1}
-                                            name="quantity"
-                                            defaultValue={1}
-                                            className="input-text qty text"
-                                        />
-                                        <input type="button" defaultValue="+" className="plus plus-btn" />
-                                    </div>
-                                    <div className="cart-item-price">
-                                        $10 <span>$15</span>
-                                    </div>
-                                </div>
-                                <button type="button" className="cart-close-btn">
-                                    <i className="uil uil-multiply" />
-                                </button>
-                            </div>
-                        </div>
-                        <div className="cart-item">
-                            <div className="cart-product-img">
-                                <img src="images/product/img-2.jpg" alt="" />
-                                <div className="offer-badge">6% OFF</div>
-                            </div>
-                            <div className="cart-text">
-                                <h4>Product Title Here</h4>
-                                <div className="cart-radio">
-                                    <ul className="kggrm-now">
-                                        <li>
-                                            <input type="radio" id="a5" name="cart2" />
-                                            <label htmlFor="a5">0.50</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" id="a6" name="cart2" />
-                                            <label htmlFor="a6">1kg</label>
-                                        </li>
-                                        <li>
-                                            <input type="radio" id="a7" name="cart2" />
-                                            <label htmlFor="a7">2kg</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="qty-group">
-                                    <div className="quantity buttons_added">
-                                        <input
-                                            type="button"
-                                            defaultValue="-"
-                                            className="minus minus-btn"
-                                        />
-                                        <input
-                                            type="number"
-                                            step={1}
-                                            name="quantity"
-                                            defaultValue={1}
-                                            className="input-text qty text"
-                                        />
-                                        <input type="button" defaultValue="+" className="plus plus-btn" />
-                                    </div>
-                                    <div className="cart-item-price">
-                                        $24 <span>$30</span>
-                                    </div>
-                                </div>
-                                <button type="button" className="cart-close-btn">
-                                    <i className="uil uil-multiply" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="offcanvas-footer">
-                    <div className="cart-total-dil saving-total ">
-                        <h4>Total Saving</h4>
-                        <span>$11</span>
-                    </div>
-                    <div className="main-total-cart">
-                        <h2>Total</h2>
-                        <span>$35</span>
-                    </div>
-                    <div className="checkout-cart">
-                        <a href="#" className="promo-code">
-                            Have a promocode?
-                        </a>
-                        <a href="checkout.html" className="cart-checkout-btn hover-btn">
-                            Proceed to Checkout
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <header className="header clearfix">
-                <div className="top-header-group">
-                    <div className="top-header">
-                        <div className="main_logo" id="logo">
-                            <a href="index.html">
-                                <img src="images/logo.svg" alt="" />
-                            </a>
-                            <a href="index.html">
-                                <img className="logo-inverse" src="images/dark-logo.svg" alt="" />
-                            </a>
-                        </div>
-                        <div className="search120">
-                            <div className="header_search position-relative">
-                                <input
-                                    className="prompt srch10"
-                                    type="text"
-                                    placeholder="Search for products.."
-                                />
-                                <i className="uil uil-search s-icon" />
-                            </div>
-                        </div>
-                        <div className="header_right">
-                            <ul>
-                                <li>
-                                    <a href="#" className="offer-link">
-                                        <i className="uil uil-phone-alt" />
-                                        1800-000-000
                                     </a>
-                                </li>
-                                <li>
-                                    <a href="offers.html" className="offer-link">
-                                        <i className="uil uil-gift" />
-                                        Offers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="faq.html" className="offer-link">
-                                        <i className="uil uil-question-circle" />
-                                        Help
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href="dashboard_my_wishlist.html"
-                                        className="option_links"
-                                        title="Wishlist"
-                                    >
-                                        <i className="uil uil-heart icon_wishlist" />
-                                        <span className="noti_count1">3</span>
-                                    </a>
-                                </li>
-                                <li className="dropdown account-dropdown">
-                                    <a
-                                        href="#"
-                                        className="opts_account"
-                                        role="button"
-                                        id="accountClick"
-                                        data-bs-auto-close="outside"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                        <img src="images/avatar/img-5.jpg" alt="" />
-                                        <span className="user__name">John Doe</span>
-                                        <i className="uil uil-angle-down" />
-                                    </a>
-                                    <div
-                                        className="dropdown-menu dropdown-menu-account dropdown-menu-end"
-                                        aria-labelledby="accountClick"
-                                        data-bs-popper="none"
-                                    >
-                                        <div className="night_mode_switch__btn">
-                                            <a href="#" id="night-mode" className="btn-night-mode">
-                                                <i className="uil uil-moon" /> Night mode
-                                                <span className="btn-night-mode-switch">
-                                                    <span className="uk-switch-button" />
-                                                </span>
-                                            </a>
-                                        </div>
-                                        <a href="dashboard_overview.html" className="channel_item">
-                                            <i className="uil uil-apps icon__1" />
-                                            Dashbaord
-                                        </a>
-                                        <a href="dashboard_my_orders.html" className="channel_item">
-                                            <i className="uil uil-box icon__1" />
-                                            My Orders
-                                        </a>
-                                        <a href="dashboard_my_wishlist.html" className="channel_item">
-                                            <i className="uil uil-heart icon__1" />
-                                            My Wishlist
-                                        </a>
-                                        <a href="dashboard_my_wallet.html" className="channel_item">
-                                            <i className="uil uil-usd-circle icon__1" />
-                                            My Wallet
-                                        </a>
-                                        <a href="dashboard_my_addresses.html" className="channel_item">
-                                            <i className="uil uil-location-point icon__1" />
-                                            My Address
-                                        </a>
-                                        <a href="offers.html" className="channel_item">
-                                            <i className="uil uil-gift icon__1" />
-                                            Offers
-                                        </a>
-                                        <a href="faq.html" className="channel_item">
-                                            <i className="uil uil-info-circle icon__1" />
-                                            Faq
-                                        </a>
-                                        <a href="sign_in.html" className="channel_item">
-                                            <i className="uil uil-lock-alt icon__1" />
-                                            Logout
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className="sub-header-group">
-                    <div className="sub-header">
-                        <nav className="navbar navbar-expand-lg bg-gambo gambo-head navbar justify-content-lg-start pt-0 pb-0">
-                            <button
-                                className="navbar-toggler"
-                                type="button"
-                                data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasNavbar"
-                                aria-controls="offcanvasNavbar"
-                            >
-                                <span className="navbar-toggler-icon">
-                                    <i className="uil uil-bars" />
-                                </span>
-                            </button>
-                            <a
-                                href="#"
-                                className="category_drop hover-btn"
-                                data-bs-toggle="modal"
-                                data-bs-target="#category_model"
-                                title="Categories"
-                            >
-                                <i className="uil uil-apps" />
-                                <span className="cate__icon">Select Category</span>
-                            </a>
-                            <div
-                                className="offcanvas offcanvas-start"
-                                tabIndex={-1}
-                                id="offcanvasNavbar"
-                                aria-labelledby="offcanvasNavbarLabel"
-                            >
-                                <div className="offcanvas-header">
-                                    <div className="offcanvas-logo" id="offcanvasNavbarLabel">
-                                        <img src="images/dark-logo-1.svg" alt="" />
-                                    </div>
-                                    <button
-                                        type="button"
-                                        className="close-btn"
-                                        data-bs-dismiss="offcanvas"
-                                        aria-label="Close"
-                                    >
-                                        <i className="uil uil-multiply" />
-                                    </button>
-                                </div>
-                                <div className="offcanvas-body">
-                                    <div className="offcanvas-category mb-4 d-block d-lg-none">
-                                        <div className="offcanvas-search position-relative">
-                                            <input
-                                                className="canvas_search"
-                                                type="text"
-                                                placeholder="Search for products.."
+                                    <div className="category-search-wrapper">
+                                        <div className="category-btn category-hover-header">
+                                            <img
+                                                className="parent"
+                                                src="assets/images/icons/bar-1.svg"
+                                                alt="icons"
                                             />
-                                            <i className="uil uil-search hover-btn canvas-icon" />
+                                            <span>Categories</span>
+                                            <ul
+                                                className="category-sub-menu metismenu"
+                                                id="category-active-four"
+                                            >
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/01.svg" alt="icons" />
+                                                        <span>Breakfast &amp; Dairy</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                    <ul className="submenu mm-collapse">
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Breakfast
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Dinner
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                {" "}
+                                                                Pumking
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/02.svg" alt="icons" />
+                                                        <span>Meats &amp; Seafood</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                    <ul className="submenu mm-collapse">
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Breakfast
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Dinner
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                {" "}
+                                                                Pumking
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/03.svg" alt="icons" />
+                                                        <span>Breads &amp; Bakery</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/04.svg" alt="icons" />
+                                                        <span>Chips &amp; Snacks</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                    <ul className="submenu mm-collapse">
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Breakfast
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Dinner
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                {" "}
+                                                                Pumking
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/05.svg" alt="icons" />
+                                                        <span>Medical Healthcare</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/06.svg" alt="icons" />
+                                                        <span>Breads &amp; Bakery</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/07.svg" alt="icons" />
+                                                        <span>Biscuits &amp; Snacks</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                    <ul className="submenu mm-collapse">
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Breakfast
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                Dinner
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a className="mobile-menu-link" href="#">
+                                                                {" "}
+                                                                Pumking
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/08.svg" alt="icons" />
+                                                        <span>Frozen Foods</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/09.svg" alt="icons" />
+                                                        <span>Grocery &amp; Staples</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/10.svg" alt="icons" />
+                                                        <span>Other Items</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <button
-                                            className="category_drop_canvas hover-btn mt-4"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#category_model"
-                                            title="Categories"
-                                        >
-                                            <i className="uil uil-apps" />
-                                            <span className="cate__icon">Select Category</span>
+                                        <form action="#" className="search-header">
+                                            <input
+                                                type="text"
+                                                placeholder="Search for products, categories or brands"
+                                                required=""
+                                            />
+                                            <a
+                                                href="#"
+                                                className="rts-btn btn-primary radious-sm with-icon"
+                                            >
+                                                <div className="btn-text">Search</div>
+                                                <div className="arrow-icon">
+                                                    <i className="fa-light fa-magnifying-glass" />
+                                                </div>
+                                                <div className="arrow-icon">
+                                                    <i className="fa-light fa-magnifying-glass" />
+                                                </div>
+                                            </a>
+                                        </form>
+                                    </div>
+                                    <div className="actions-area">
+                                        <div className="search-btn" id="searchs">
+                                            <svg
+                                                width={17}
+                                                height={16}
+                                                viewBox="0 0 17 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M15.75 14.7188L11.5625 10.5312C12.4688 9.4375 12.9688 8.03125 12.9688 6.5C12.9688 2.9375 10.0312 0 6.46875 0C2.875 0 0 2.9375 0 6.5C0 10.0938 2.90625 13 6.46875 13C7.96875 13 9.375 12.5 10.5 11.5938L14.6875 15.7812C14.8438 15.9375 15.0312 16 15.25 16C15.4375 16 15.625 15.9375 15.75 15.7812C16.0625 15.5 16.0625 15.0312 15.75 14.7188ZM1.5 6.5C1.5 3.75 3.71875 1.5 6.5 1.5C9.25 1.5 11.5 3.75 11.5 6.5C11.5 9.28125 9.25 11.5 6.5 11.5C3.71875 11.5 1.5 9.28125 1.5 6.5Z"
+                                                    fill="#1F1F25"
+                                                />
+                                            </svg>
+                                        </div>
+                                        <div className="menu-btn" id="menu-btn">
+                                            <svg
+                                                width={20}
+                                                height={16}
+                                                viewBox="0 0 20 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <rect y={14} width={20} height={2} fill="#1F1F25" />
+                                                <rect y={7} width={20} height={2} fill="#1F1F25" />
+                                                <rect width={20} height={2} fill="#1F1F25" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div className="accont-wishlist-cart-area-header">
+                                        <a href="account.html" className="btn-border-only account">
+                                            <i className="fa-light fa-user" />
+                                            <span>Account</span>
+                                        </a>
+
+                                        <div className="btn-border-only cart category-hover-header">
+                                            <i className="fa-sharp fa-regular fa-cart-shopping" />
+                                            <span className="text">My Shopping List</span>
+                                            <span className="number">2</span>
+                                            <div className="category-sub-menu card-number-show">
+                                                <h5 className="shopping-cart-number">Shopping Cart (03)</h5>
+                                                <div className="cart-item-1 border-top">
+                                                    <div className="img-name">
+                                                        <div className="thumbanil">
+                                                            <img src="assets/images/shop/cart-1.png" alt="" />
+                                                        </div>
+                                                        <div className="details">
+                                                            <a href="shop-details.html">
+                                                                <h5 className="title">
+                                                                    Foster Farms Breast Nuggets Shaped Chicken
+                                                                </h5>
+                                                            </a>
+                                                            <div className="number">
+                                                                1 <i className="fa-regular fa-x" />
+                                                                <span>$36.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="close-c1">
+                                                        <i className="fa-regular fa-x" />
+                                                    </div>
+                                                </div>
+                                                <div className="cart-item-1">
+                                                    <div className="img-name">
+                                                        <div className="thumbanil">
+                                                            <img src="assets/images/shop/05.png" alt="" />
+                                                        </div>
+                                                        <div className="details">
+                                                            <a href="shop-details.html">
+                                                                <h5 className="title">
+                                                                    Foster Farms Breast Nuggets Shaped Chicken
+                                                                </h5>
+                                                            </a>
+                                                            <div className="number">
+                                                                1 <i className="fa-regular fa-x" />
+                                                                <span>$36.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="close-c1">
+                                                        <i className="fa-regular fa-x" />
+                                                    </div>
+                                                </div>
+                                                <div className="cart-item-1">
+                                                    <div className="img-name">
+                                                        <div className="thumbanil">
+                                                            <img src="assets/images/shop/04.png" alt="" />
+                                                        </div>
+                                                        <div className="details">
+                                                            <a href="shop-details.html">
+                                                                <h5 className="title">
+                                                                    Foster Farms Breast Nuggets Shaped Chicken
+                                                                </h5>
+                                                            </a>
+                                                            <div className="number">
+                                                                1 <i className="fa-regular fa-x" />
+                                                                <span>$36.00</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="close-c1">
+                                                        <i className="fa-regular fa-x" />
+                                                    </div>
+                                                </div>
+                                                <div className="sub-total-cart-balance">
+                                                    <div className="bottom-content-deals mt--10">
+                                                        <div className="top">
+                                                            <span>Sub Total:</span>
+                                                            <span className="number-c">$108.00</span>
+                                                        </div>
+                                                        <div className="single-progress-area-incard">
+                                                            <div className="progress">
+                                                                <div
+                                                                    className="progress-bar wow fadeInLeft"
+                                                                    role="progressbar"
+                                                                    style={{ width: "80%" }}
+                                                                    aria-valuenow={25}
+                                                                    aria-valuemin={0}
+                                                                    aria-valuemax={100}
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                        <p>
+                                                            Spend More <span>$125.00</span> to reach{" "}
+                                                            <span>Free Shipping</span>
+                                                        </p>
+                                                    </div>
+                                                    <div className="button-wrapper d-flex align-items-center justify-content-between">
+                                                        <a href="cart.html" className="rts-btn btn-primary ">
+                                                            View Cart
+                                                        </a>
+                                                        <a
+                                                            href="checkout.html"
+                                                            className="rts-btn btn-primary border-only"
+                                                        >
+                                                            CheckOut
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a href="cart.html" className="over_link" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="rts-header-nav-area-one header--sticky">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="nav-and-btn-wrapper">
+                                    <div className="nav-area">
+                                        <nav>
+                                            <ul className="parent-nav">
+                                                <li className="parent has-dropdown">
+                                                    <a className="nav-link" href="#">
+                                                        Home
+                                                    </a>
+
+                                                </li>
+                                                <li className="parent">
+                                                    <a href="about.html">About</a>
+                                                </li>
+                                                <li className="parent with-megamenu">
+                                                    <a href="#">ProductList</a>
+
+                                                </li>
+                                                <li className="parent has-dropdown">
+                                                    <a className="nav-link" href="#">
+                                                        Branches
+                                                    </a>
+
+                                                </li>
+
+                                                <li className="parent">
+                                                    <a href="contact.html">Contact</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    {/* button-area */}
+                                    <div className="right-btn-area">
+                                        <a href="#" className="btn-narrow">
+                                            Trending Products
+                                        </a>
+                                        <button className="rts-btn btn-primary">
+                                            Get 30% Discount Now
+                                            <span>Sale</span>
                                         </button>
                                     </div>
-                                    <ul className="navbar-nav justify-content-start flex-grow-1 pe_5">
-                                        <li className="nav-item">
-                                            <a
-                                                className="nav-link active"
-                                                aria-current="page"
-                                                href="index.html"
-                                            >
+                                    {/* button-area end */}
+                                </div>
+                            </div>
+                            <div className="col-lg-12">
+                                <div className="logo-search-category-wrapper after-md-device-header">
+                                    <a href="index.html" className="logo-area">
+                                        <img
+                                            src="assets/images/logo/logo-01.svg"
+                                            alt="logo-main"
+                                            className="logo"
+                                        />
+                                    </a>
+                                    <div className="category-search-wrapper">
+                                        <div className="category-btn category-hover-header">
+                                            <img
+                                                className="parent"
+                                                src="assets/images/icons/bar-1.svg"
+                                                alt="icons"
+                                            />
+                                            <span>Categories</span>
+                                            <ul className="category-sub-menu">
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/01.svg" alt="icons" />
+                                                        <span>Breakfast &amp; Dairy</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/02.svg" alt="icons" />
+                                                        <span>Meats &amp; Seafood</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/03.svg" alt="icons" />
+                                                        <span>Breads &amp; Bakery</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/04.svg" alt="icons" />
+                                                        <span>Chips &amp; Snacks</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/05.svg" alt="icons" />
+                                                        <span>Medical Healthcare</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/06.svg" alt="icons" />
+                                                        <span>Breads &amp; Bakery</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/07.svg" alt="icons" />
+                                                        <span>Biscuits &amp; Snacks</span>
+                                                        <i className="fa-regular fa-plus" />
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/08.svg" alt="icons" />
+                                                        <span>Frozen Foods</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/09.svg" alt="icons" />
+                                                        <span>Grocery &amp; Staples</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" className="menu-item">
+                                                        <img src="assets/images/icons/10.svg" alt="icons" />
+                                                        <span>Other Items</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <form action="#" className="search-header">
+                                            <input
+                                                type="text"
+                                                placeholder="Search for products, categories or brands"
+                                                required=""
+                                            />
+                                            <button className="rts-btn btn-primary radious-sm with-icon">
+                                                <span className="btn-text">Search</span>
+                                                <span className="arrow-icon">
+                                                    <i className="fa-light fa-magnifying-glass" />
+                                                </span>
+                                                <span className="arrow-icon">
+                                                    <i className="fa-light fa-magnifying-glass" />
+                                                </span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div className="main-wrapper-action-2 d-flex">
+                                        <div className="accont-wishlist-cart-area-header">
+                                            <a href="account.html" className="btn-border-only account">
+                                                <i className="fa-light fa-user" />
+                                                Account
+                                            </a>
+                                            <a href="wishlist.html" className="btn-border-only wishlist">
+                                                <i className="fa-regular fa-heart" />
+                                                Wishlist
+                                            </a>
+                                            <div className="btn-border-only cart category-hover-header">
+                                                <i className="fa-sharp fa-regular fa-cart-shopping" />
+                                                <span className="text">My Cart</span>
+                                                <div className="category-sub-menu card-number-show">
+                                                    <h5 className="shopping-cart-number">Shopping Cart (03)</h5>
+                                                    <div className="cart-item-1 border-top">
+                                                        <div className="img-name">
+                                                            <div className="thumbanil">
+                                                                <img src="assets/images/shop/cart-1.png" alt="" />
+                                                            </div>
+                                                            <div className="details">
+                                                                <a href="shop-details.html">
+                                                                    <h5 className="title">
+                                                                        Foster Farms Breast Nuggets Shaped Chicken
+                                                                    </h5>
+                                                                </a>
+                                                                <div className="number">
+                                                                    1 <i className="fa-regular fa-x" />
+                                                                    <span>$36.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="close-c1">
+                                                            <i className="fa-regular fa-x" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="cart-item-1">
+                                                        <div className="img-name">
+                                                            <div className="thumbanil">
+                                                                <img src="assets/images/shop/05.png" alt="" />
+                                                            </div>
+                                                            <div className="details">
+                                                                <a href="shop-details.html">
+                                                                    <h5 className="title">
+                                                                        Foster Farms Breast Nuggets Shaped Chicken
+                                                                    </h5>
+                                                                </a>
+                                                                <div className="number">
+                                                                    1 <i className="fa-regular fa-x" />
+                                                                    <span>$36.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="close-c1">
+                                                            <i className="fa-regular fa-x" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="cart-item-1">
+                                                        <div className="img-name">
+                                                            <div className="thumbanil">
+                                                                <img src="assets/images/shop/04.png" alt="" />
+                                                            </div>
+                                                            <div className="details">
+                                                                <a href="shop-details.html">
+                                                                    <h5 className="title">
+                                                                        Foster Farms Breast Nuggets Shaped Chicken
+                                                                    </h5>
+                                                                </a>
+                                                                <div className="number">
+                                                                    1 <i className="fa-regular fa-x" />
+                                                                    <span>$36.00</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="close-c1">
+                                                            <i className="fa-regular fa-x" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="sub-total-cart-balance">
+                                                        <div className="bottom-content-deals mt--10">
+                                                            <div className="top">
+                                                                <span>Sub Total:</span>
+                                                                <span className="number-c">$108.00</span>
+                                                            </div>
+                                                            <div className="single-progress-area-incard">
+                                                                <div className="progress">
+                                                                    <div
+                                                                        className="progress-bar wow fadeInLeft"
+                                                                        role="progressbar"
+                                                                        style={{ width: "80%" }}
+                                                                        aria-valuenow={25}
+                                                                        aria-valuemin={0}
+                                                                        aria-valuemax={100}
+                                                                    />
+                                                                </div>
+                                                            </div>
+                                                            <p>
+                                                                Spend More <span>$125.00</span> to reach{" "}
+                                                                <span>Free Shipping</span>
+                                                            </p>
+                                                        </div>
+                                                        <div className="button-wrapper d-flex align-items-center justify-content-between">
+                                                            <a href="cart.html" className="rts-btn btn-primary ">
+                                                                View Cart
+                                                            </a>
+                                                            <a
+                                                                href="checkout.html"
+                                                                className="rts-btn btn-primary border-only"
+                                                            >
+                                                                CheckOut
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="cart.html" className="over_link" />
+                                            </div>
+                                        </div>
+                                        <div className="actions-area">
+                                            <div className="search-btn" id="search">
+                                                <svg
+                                                    width={17}
+                                                    height={16}
+                                                    viewBox="0 0 17 16"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M15.75 14.7188L11.5625 10.5312C12.4688 9.4375 12.9688 8.03125 12.9688 6.5C12.9688 2.9375 10.0312 0 6.46875 0C2.875 0 0 2.9375 0 6.5C0 10.0938 2.90625 13 6.46875 13C7.96875 13 9.375 12.5 10.5 11.5938L14.6875 15.7812C14.8438 15.9375 15.0312 16 15.25 16C15.4375 16 15.625 15.9375 15.75 15.7812C16.0625 15.5 16.0625 15.0312 15.75 14.7188ZM1.5 6.5C1.5 3.75 3.71875 1.5 6.5 1.5C9.25 1.5 11.5 3.75 11.5 6.5C11.5 9.28125 9.25 11.5 6.5 11.5C3.71875 11.5 1.5 9.28125 1.5 6.5Z"
+                                                        fill="#1F1F25"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <div className="menu-btn">
+                                                <svg
+                                                    width={20}
+                                                    height={16}
+                                                    viewBox="0 0 20 16"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <rect y={14} width={20} height={2} fill="#1F1F25" />
+                                                    <rect y={7} width={20} height={2} fill="#1F1F25" />
+                                                    <rect width={20} height={2} fill="#1F1F25" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="side-bar" className="side-bar header-two">
+                <button className="close-icon-menu">
+                    <i className="far fa-times" />
+                </button>
+                <form action="#" className="search-input-area-menu mt--30">
+                    <input type="text" placeholder="Search..." required="" />
+                    <button>
+                        <i className="fa-light fa-magnifying-glass" />
+                    </button>
+                </form>
+                <div className="mobile-menu-nav-area tab-nav-btn mt--20">
+                    <nav>
+                        <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button
+                                className="nav-link active"
+                                id="nav-home-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-home"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-home"
+                                aria-selected="true"
+                            >
+                                Menu
+                            </button>
+                            <button
+                                className="nav-link"
+                                id="nav-profile-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#nav-profile"
+                                type="button"
+                                role="tab"
+                                aria-controls="nav-profile"
+                                aria-selected="false"
+                            >
+                                Category
+                            </button>
+                        </div>
+                    </nav>
+                    <div className="tab-content" id="nav-tabContent">
+                        <div
+                            className="tab-pane fade show active"
+                            id="nav-home"
+                            role="tabpanel"
+                            aria-labelledby="nav-home-tab"
+                            tabIndex={0}
+                        >
+                            {/* mobile menu area start */}
+                            <div className="mobile-menu-main">
+                                <nav className="nav-main mainmenu-nav mt--30">
+                                    <ul className="mainmenu metismenu" id="mobile-menu-active">
+                                        <li className="has-droupdown">
+                                            <a href="#" className="main">
                                                 Home
                                             </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="shop_grid.html">
-                                                New Products
-                                            </a>
-                                        </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="shop_grid.html">
-                                                Featured Products
-                                            </a>
-                                        </li>
-                                        <li className="nav-item dropdown">
-                                            <a
-                                                className="nav-link dropdown-toggle"
-                                                href="#"
-                                                role="button"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
-                                                Blog
-                                            </a>
-                                            <ul className="dropdown-menu dropdown-submenu">
+                                            <ul className="submenu mm-collapse">
                                                 <li>
-                                                    <a className="dropdown-item" href="our_blog.html">
-                                                        Our Blog
+                                                    <a className="mobile-menu-link" href="index.html">
+                                                        Home One
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="blog_no_sidebar.html">
-                                                        Our Blog Two No Sidebar
+                                                    <a className="mobile-menu-link" href="index-two.html">
+                                                        Home Two
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="blog_left_sidebar.html">
-                                                        Our Blog with Left Sidebar
+                                                    <a className="mobile-menu-link" href="index-three.html">
+                                                        Home Three
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="blog_right_sidebar.html">
-                                                        Our Blog with Right Sidebar
+                                                    <a className="mobile-menu-link" href="index-four.html">
+                                                        Home Four
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="blog_detail_view.html">
-                                                        Blog Detail View
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a
-                                                        className="dropdown-item"
-                                                        href="blog_left_sidebar_single_view.html"
-                                                    >
-                                                        Blog Detail View with Sidebar
+                                                    <a className="mobile-menu-link" href="index-five.html">
+                                                        {" "}
+                                                        Home Five
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="nav-item dropdown">
-                                            <a
-                                                className="nav-link dropdown-toggle"
-                                                href="#"
-                                                role="button"
-                                                data-bs-toggle="dropdown"
-                                                aria-expanded="false"
-                                            >
+                                        <li>
+                                            <a href="about.html" className="main">
+                                                About
+                                            </a>
+                                        </li>
+                                        <li className="has-droupdown">
+                                            <a href="#" className="main">
                                                 Pages
                                             </a>
-                                            <ul className="dropdown-menu dropdown-submenu">
+                                            <ul className="submenu mm-collapse">
                                                 <li>
-                                                    <a className="dropdown-item" href="dashboard_overview.html">
-                                                        Account
+                                                    <a className="mobile-menu-link" href="about.html">
+                                                        About
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="about_us.html">
-                                                        About Us
+                                                    <a className="mobile-menu-link" href="faq.html">
+                                                        Faq's
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="shop_grid.html">
-                                                        Online Shop
+                                                    <a className="mobile-menu-link" href="invoice.html">
+                                                        Invoice
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a
-                                                        className="dropdown-item"
-                                                        href="single_product_view.html"
-                                                    >
-                                                        Single Product View
+                                                    <a className="mobile-menu-link" href="contact.html">
+                                                        Contact
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="checkout.html">
-                                                        Checkout
+                                                    <a className="mobile-menu-link" href="register.html">
+                                                        Register
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="request_product.html">
-                                                        Product Request
+                                                    <a className="mobile-menu-link" href="login.html">
+                                                        Login
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="order_placed.html">
-                                                        Order Placed
+                                                    <a className="mobile-menu-link" href="privacy-policy.html">
+                                                        Privacy Policy
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="bill.html">
-                                                        Bill Slip
+                                                    <a className="mobile-menu-link" href="cookies-policy.html">
+                                                        Cookies Policy
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="job_detail_view.html">
-                                                        Job Detail View
+                                                    <a className="mobile-menu-link" href="terms-condition.html">
+                                                        Terms Condition
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a className="dropdown-item" href="sign_in.html">
-                                                        Sign In
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a className="dropdown-item" href="sign_up.html">
-                                                        Sign Up
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a className="dropdown-item" href="forgot_password.html">
-                                                        Forgot Password
+                                                    <a className="mobile-menu-link" href="404.html">
+                                                        Error Page
                                                     </a>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li className="nav-item">
-                                            <a className="nav-link" href="contact_us.html">
+                                        <li className="has-droupdown">
+                                            <a href="#" className="main">
+                                                Shop
+                                            </a>
+                                            <ul className="submenu mm-collapse">
+                                                <li className="has-droupdown third-lvl">
+                                                    <a className="main" href="#">
+                                                        Shop Layout
+                                                    </a>
+                                                    <ul className="submenu-third-lvl mm-collapse">
+                                                        <li>
+                                                            <a href="shop-grid-sidebar.html" />
+                                                            Shop Grid Sidebar
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-list-sidebar.html" />
+                                                            Shop List Sidebar
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-grid-top-filter.html" />
+                                                            Shop Grid Top Filter
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-list-top-filter.html" />
+                                                            Shop List Top Filter
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li className="has-droupdown third-lvl">
+                                                    <a className="main" href="#">
+                                                        Shop Details
+                                                    </a>
+                                                    <ul className="submenu-third-lvl mm-collapse">
+                                                        <li>
+                                                            <a href="shop-details.html" />
+                                                            Shop Details
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-details-2.html" />
+                                                            Shop Details 2
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-grid-top-filter.html" />
+                                                            Shop Grid Top Filter
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-list-top-filter.html" />
+                                                            Shop List Top Filter
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li className="has-droupdown third-lvl">
+                                                    <a className="main" href="#">
+                                                        Product Feature
+                                                    </a>
+                                                    <ul className="submenu-third-lvl mm-collapse">
+                                                        <li>
+                                                            <a href="shop-details-variable.html" />
+                                                            Shop Details Variable
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-details-affiliats.html" />
+                                                            Shop Details Affiliats
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-details-group.html" />
+                                                            Shop Details Group
+                                                        </li>
+                                                        <li>
+                                                            <a href="shop-compare.html" />
+                                                            Shop Compare
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li className="has-droupdown third-lvl">
+                                                    <a className="main" href="#">
+                                                        Shop Others
+                                                    </a>
+                                                    <ul className="submenu-third-lvl mm-collapse">
+                                                        <li>
+                                                            <a href="cart.html" />
+                                                            Cart
+                                                        </li>
+                                                        <li>
+                                                            <a href="checkout.html" />
+                                                            Checkout
+                                                        </li>
+                                                        <li>
+                                                            <a href="trackorder.html" />
+                                                            Trackorder
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li className="has-droupdown">
+                                            <a href="#" className="main">
+                                                Blog
+                                            </a>
+                                            <ul className="submenu mm-collapse">
+                                                <li>
+                                                    <a className="mobile-menu-link" href="blog.html">
+                                                        Blog
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        className="mobile-menu-link"
+                                                        href="blog-list-left-sidebar.html"
+                                                    >
+                                                        Blog Left Sidebar
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        className="mobile-menu-link"
+                                                        href="blog-list-right-sidebar.html"
+                                                    >
+                                                        Blog List Right Sidebar
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html" className="main">
                                                 Contact Us
                                             </a>
                                         </li>
                                     </ul>
-                                    <div className="d-block d-lg-none">
-                                        <ul className="offcanvas-help-links">
+                                </nav>
+                            </div>
+                            {/* mobile menu area end */}
+                        </div>
+                        <div
+                            className="tab-pane fade"
+                            id="nav-profile"
+                            role="tabpanel"
+                            aria-labelledby="nav-profile-tab"
+                            tabIndex={0}
+                        >
+                            <div className="category-btn category-hover-header menu-category">
+                                <ul className="category-sub-menu metismenu" id="category-active-menu">
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/01.svg" alt="icons" />
+                                            <span>Breakfast &amp; Dairy</span>
+                                            <i className="fa-regular fa-plus" />
+                                        </a>
+                                        <ul className="submenu mm-collapse">
                                             <li>
-                                                <a href="#" className="offer-link">
-                                                    <i className="uil uil-phone-alt" />
-                                                    1800-000-000
+                                                <a className="mobile-menu-link" href="#">
+                                                    Breakfast
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="offers.html" className="offer-link">
-                                                    <i className="uil uil-gift" />
-                                                    Offers
+                                                <a className="mobile-menu-link" href="#">
+                                                    Dinner
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="faq.html" className="offer-link">
-                                                    <i className="uil uil-question-circle" />
-                                                    Help
+                                                <a className="mobile-menu-link" href="#">
+                                                    {" "}
+                                                    Pumking
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div className="offcanvas-copyright">
-                                            <i className="uil uil-copyright" />
-                                            Copyright 2022 <b>Gambolthemes</b> . All rights reserved
-                                        </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/02.svg" alt="icons" />
+                                            <span>Meats &amp; Seafood</span>
+                                            <i className="fa-regular fa-plus" />
+                                        </a>
+                                        <ul className="submenu mm-collapse">
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    Breakfast
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    Dinner
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    {" "}
+                                                    Pumking
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/03.svg" alt="icons" />
+                                            <span>Breads &amp; Bakery</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/04.svg" alt="icons" />
+                                            <span>Chips &amp; Snacks</span>
+                                            <i className="fa-regular fa-plus" />
+                                        </a>
+                                        <ul className="submenu mm-collapse">
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    Breakfast
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    Dinner
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    {" "}
+                                                    Pumking
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/05.svg" alt="icons" />
+                                            <span>Medical Healthcare</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/06.svg" alt="icons" />
+                                            <span>Breads &amp; Bakery</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/07.svg" alt="icons" />
+                                            <span>Biscuits &amp; Snacks</span>
+                                            <i className="fa-regular fa-plus" />
+                                        </a>
+                                        <ul className="submenu mm-collapse">
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    Breakfast
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    Dinner
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a className="mobile-menu-link" href="#">
+                                                    {" "}
+                                                    Pumking
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/08.svg" alt="icons" />
+                                            <span>Frozen Foods</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/09.svg" alt="icons" />
+                                            <span>Grocery &amp; Staples</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="menu-item">
+                                            <img src="assets/images/icons/10.svg" alt="icons" />
+                                            <span>Other Items</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div className="sub_header_right">
-                                <div className="header_cart">
-                                    <a
-                                        href="#"
-                                        className="cart__btn hover-btn"
-                                        data-bs-toggle="offcanvas"
-                                        data-bs-target="#offcanvasRight"
-                                        aria-controls="offcanvasRight"
-                                    >
-                                        <i className="uil uil-shopping-cart-alt" />
-                                        <span>Cart</span>
-                                        <ins>2</ins>
-                                        <i className="uil uil-angle-down" />
-                                    </a>
-                                </div>
-                            </div>
-                        </nav>
+                        </div>
                     </div>
                 </div>
-            </header>
+                {/* button area wrapper start */}
+                <div className="button-area-main-wrapper-menuy-sidebar mt--50">
+                    <div className="contact-area">
+                        <div className="phone">
+                            <i className="fa-light fa-headset" />
+                            <a href="#">02345697871</a>
+                        </div>
+                        <div className="phone">
+                            <i className="fa-light fa-envelope" />
+                            <a href="#">02345697871</a>
+                        </div>
+                    </div>
+                    <div className="buton-area-bottom">
+                        <a href="login.html" className="rts-btn btn-primary">
+                            Sign In
+                        </a>
+                        <a href="register.html" className="rts-btn btn-primary">
+                            Sign Up
+                        </a>
+                    </div>
+                </div>
+                {/* button area wrapper end */}
+            </div>
+
 
         </>
     )

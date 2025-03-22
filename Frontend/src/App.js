@@ -7,6 +7,9 @@ import About from "./Pages/About";
 import ProductList from "./Pages/ProductList";
 import Branches from "./Pages/Branches";
 import Contact from "./Pages/Contact";
+import ShoppingList from "./Pages/ShoppingList";
+import Registration from "./Pages/Registration";
+import Login from "./Pages/Login";
  
 
 
@@ -27,6 +30,11 @@ function App() {
                     <Route path='/branches' element={<Base><Branches/></Base>}/>
                     <Route path='/about' element={<Base><About/></Base>}/>
                     <Route path='/contact' element={<Base><Contact/></Base>}/>
+                    <Route path='/shopping-list' element={<Base><ShoppingList/></Base>}/>
+
+
+                    <Route path='/login' element={<Base><Login/></Base>}/>
+                    <Route path='/registration' element={<Base><Registration/></Base>}/>
                     <Route path='*' element={<PageNotFound404/>}/>
 
                      

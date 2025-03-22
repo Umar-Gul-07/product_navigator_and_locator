@@ -12,7 +12,7 @@ function Header() {
                                     <div className="nav-sm-left">
                                         <ul className="nav-h_top" >
                                             <li>
-                                                <a href="about.html" className="text-white">About Us</a>
+                                                <Link to="about.html" className="text-white">About Us</Link>
                                             </li>
 
 
@@ -24,47 +24,47 @@ function Header() {
                                     <div className="nav-sm-left">
                                         <ul className="nav-h_top language">
                                             <li className="category-hover-header language-hover">
-                                                <a href="#" className="text-white " style={{ marginLeft: "end" }}> English</a>
+                                                <Link to="#" className="text-white " style={{ marginLeft: "end" }}> English</Link>
                                                 <ul className="category-sub-menu">
                                                     <li>
-                                                        <a href="#" className="menu-item">
+                                                        <Link to="#" className="menu-item">
                                                             <span >Italian</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#" className="menu-item">
+                                                        <Link to="#" className="menu-item">
                                                             <span>Russian</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#" className="menu-item">
+                                                        <Link to="#" className="menu-item">
                                                             <span>Chinian</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li className="category-hover-header language-hover">
-                                                <a href="#" className="text-white">USD</a>
+                                                <Link to="#" className="text-white">USD</Link>
                                                 <ul className="category-sub-menu">
                                                     <li>
-                                                        <a href="#" className="menu-item">
+                                                        <Link to="#" className="menu-item">
                                                             <span>Rubol</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#" className="menu-item">
+                                                        <Link to="#" className="menu-item">
                                                             <span>Rupi</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <a href="#" className="menu-item">
+                                                        <Link to="#" className="menu-item">
                                                             <span>Euro</span>
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="trackorder.html" className="text-white">Track Order</a>
+                                                <Link to="trackorder.html" className="text-white">Track Order</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -79,13 +79,13 @@ function Header() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="logo-search-category-wrapper">
-                                    <a href="index.html" className="logo-area">
+                                    <Link to="index.html" className="logo-area">
                                         <img
                                             src="assets/images/logo/logo-01.svg"
                                             alt="logo-main"
                                             className="logo"
                                         />
-                                    </a>
+                                    </Link>
                                     <div className="category-search-wrapper">
                                         <div className="category-btn category-hover-header">
                                             <img
@@ -99,140 +99,140 @@ function Header() {
                                                 id="category-active-four"
                                             >
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/01.svg" alt="icons" />
                                                         <span>Breakfast &amp; Dairy</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu mm-collapse">
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Breakfast
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Dinner
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 {" "}
                                                                 Pumking
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/02.svg" alt="icons" />
                                                         <span>Meats &amp; Seafood</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu mm-collapse">
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Breakfast
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Dinner
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 {" "}
                                                                 Pumking
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/03.svg" alt="icons" />
                                                         <span>Breads &amp; Bakery</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/04.svg" alt="icons" />
                                                         <span>Chips &amp; Snacks</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu mm-collapse">
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Breakfast
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Dinner
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 {" "}
                                                                 Pumking
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/05.svg" alt="icons" />
                                                         <span>Medical Healthcare</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/06.svg" alt="icons" />
                                                         <span>Breads &amp; Bakery</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/07.svg" alt="icons" />
                                                         <span>Biscuits &amp; Snacks</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu mm-collapse">
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Breakfast
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 Dinner
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                         <li>
-                                                            <a className="mobile-menu-link" href="#">
+                                                            <Link className="mobile-menu-link" href="#">
                                                                 {" "}
                                                                 Pumking
-                                                            </a>
+                                                            </Link>
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/08.svg" alt="icons" />
                                                         <span>Frozen Foods</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/09.svg" alt="icons" />
                                                         <span>Grocery &amp; Staples</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/10.svg" alt="icons" />
                                                         <span>Other Items</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -242,7 +242,7 @@ function Header() {
                                                 placeholder="Search for products, categories or brands"
                                                 required=""
                                             />
-                                            <a
+                                            <Link
                                                 href="#"
                                                 className="rts-btn btn-primary radious-sm with-icon"
                                             >
@@ -253,7 +253,7 @@ function Header() {
                                                 <div className="arrow-icon">
                                                     <i className="fa-light fa-magnifying-glass" />
                                                 </div>
-                                            </a>
+                                            </Link>
                                         </form>
                                     </div>
                                     <div className="actions-area">
@@ -286,117 +286,27 @@ function Header() {
                                         </div>
                                     </div>
                                     <div className="accont-wishlist-cart-area-header">
-                                        <a href="account.html" className="btn-border-only account">
+                                        <Link to="/login" className="btn-border-only account">
+                                            <i className="fa-light fa-user" />
+                                            <span>Sign in</span>
+                                        </Link>
+
+                                        <Link to="/registration" className="btn-border-only account">
+                                            <i className="fa-light fa-user" />
+                                            <span>Sign up</span>
+                                        </Link>
+                                        <Link to="/" className="btn-border-only account">
                                             <i className="fa-light fa-user" />
                                             <span>Account</span>
-                                        </a>
+                                        </Link>
 
                                         <div className="btn-border-only cart category-hover-header">
                                             <i className="fa-sharp fa-regular fa-cart-shopping" />
+                                            <Link to="/shoping-list">
                                             <span className="text">My Shopping List</span>
+                                            </Link>
                                             <span className="number">2</span>
-                                            <div className="category-sub-menu card-number-show">
-                                                <h5 className="shopping-cart-number">Shopping Cart (03)</h5>
-                                                <div className="cart-item-1 border-top">
-                                                    <div className="img-name">
-                                                        <div className="thumbanil">
-                                                            <img src="assets/images/shop/cart-1.png" alt="" />
-                                                        </div>
-                                                        <div className="details">
-                                                            <a href="shop-details.html">
-                                                                <h5 className="title">
-                                                                    Foster Farms Breast Nuggets Shaped Chicken
-                                                                </h5>
-                                                            </a>
-                                                            <div className="number">
-                                                                1 <i className="fa-regular fa-x" />
-                                                                <span>$36.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="close-c1">
-                                                        <i className="fa-regular fa-x" />
-                                                    </div>
-                                                </div>
-                                                <div className="cart-item-1">
-                                                    <div className="img-name">
-                                                        <div className="thumbanil">
-                                                            <img src="assets/images/shop/05.png" alt="" />
-                                                        </div>
-                                                        <div className="details">
-                                                            <a href="shop-details.html">
-                                                                <h5 className="title">
-                                                                    Foster Farms Breast Nuggets Shaped Chicken
-                                                                </h5>
-                                                            </a>
-                                                            <div className="number">
-                                                                1 <i className="fa-regular fa-x" />
-                                                                <span>$36.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="close-c1">
-                                                        <i className="fa-regular fa-x" />
-                                                    </div>
-                                                </div>
-                                                <div className="cart-item-1">
-                                                    <div className="img-name">
-                                                        <div className="thumbanil">
-                                                            <img src="assets/images/shop/04.png" alt="" />
-                                                        </div>
-                                                        <div className="details">
-                                                            <a href="shop-details.html">
-                                                                <h5 className="title">
-                                                                    Foster Farms Breast Nuggets Shaped Chicken
-                                                                </h5>
-                                                            </a>
-                                                            <div className="number">
-                                                                1 <i className="fa-regular fa-x" />
-                                                                <span>$36.00</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="close-c1">
-                                                        <i className="fa-regular fa-x" />
-                                                    </div>
-                                                </div>
-                                                <div className="sub-total-cart-balance">
-                                                    <div className="bottom-content-deals mt--10">
-                                                        <div className="top">
-                                                            <span>Sub Total:</span>
-                                                            <span className="number-c">$108.00</span>
-                                                        </div>
-                                                        <div className="single-progress-area-incard">
-                                                            <div className="progress">
-                                                                <div
-                                                                    className="progress-bar wow fadeInLeft"
-                                                                    role="progressbar"
-                                                                    style={{ width: "80%" }}
-                                                                    aria-valuenow={25}
-                                                                    aria-valuemin={0}
-                                                                    aria-valuemax={100}
-                                                                />
-                                                            </div>
-                                                        </div>
-                                                        <p>
-                                                            Spend More <span>$125.00</span> to reach{" "}
-                                                            <span>Free Shipping</span>
-                                                        </p>
-                                                    </div>
-                                                    <div className="button-wrapper d-flex align-items-center justify-content-between">
-                                                        <a href="cart.html" className="rts-btn btn-primary ">
-                                                            View Cart
-                                                        </a>
-                                                        <a
-                                                            href="checkout.html"
-                                                            className="rts-btn btn-primary border-only"
-                                                        >
-                                                            CheckOut
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <a href="cart.html" className="over_link" />
+                                            <Link to="/shopping-list" className="over_link" />
                                         </div>
                                     </div>
                                 </div>
@@ -441,9 +351,9 @@ function Header() {
                                     </div>
                                     {/* button-area */}
                                     <div className="right-btn-area">
-                                        <a href="#" className="btn-narrow">
+                                        <Link to="#" className="btn-narrow">
                                             Trending Products
-                                        </a>
+                                        </Link>
                                         <button className="rts-btn btn-primary">
                                             Get 30% Discount Now
                                             <span>Sale</span>
@@ -454,13 +364,13 @@ function Header() {
                             </div>
                             <div className="col-lg-12">
                                 <div className="logo-search-category-wrapper after-md-device-header">
-                                    <a href="index.html" className="logo-area">
+                                    <Link to="index.html" className="logo-area">
                                         <img
                                             src="assets/images/logo/logo-01.svg"
                                             alt="logo-main"
                                             className="logo"
                                         />
-                                    </a>
+                                    </Link>
                                     <div className="category-search-wrapper">
                                         <div className="category-btn category-hover-header">
                                             <img
@@ -471,68 +381,68 @@ function Header() {
                                             <span>Categories</span>
                                             <ul className="category-sub-menu">
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/01.svg" alt="icons" />
                                                         <span>Breakfast &amp; Dairy</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/02.svg" alt="icons" />
                                                         <span>Meats &amp; Seafood</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/03.svg" alt="icons" />
                                                         <span>Breads &amp; Bakery</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/04.svg" alt="icons" />
                                                         <span>Chips &amp; Snacks</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/05.svg" alt="icons" />
                                                         <span>Medical Healthcare</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/06.svg" alt="icons" />
                                                         <span>Breads &amp; Bakery</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/07.svg" alt="icons" />
                                                         <span>Biscuits &amp; Snacks</span>
                                                         <i className="fa-regular fa-plus" />
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/08.svg" alt="icons" />
                                                         <span>Frozen Foods</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/09.svg" alt="icons" />
                                                         <span>Grocery &amp; Staples</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a href="#" className="menu-item">
+                                                    <Link to="#" className="menu-item">
                                                         <img src="assets/images/icons/10.svg" alt="icons" />
                                                         <span>Other Items</span>
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -555,14 +465,14 @@ function Header() {
                                     </div>
                                     <div className="main-wrapper-action-2 d-flex">
                                         <div className="accont-wishlist-cart-area-header">
-                                            <a href="account.html" className="btn-border-only account">
+                                            <Link to="account.html" className="btn-border-only account">
                                                 <i className="fa-light fa-user" />
                                                 Account
-                                            </a>
-                                            <a href="wishlist.html" className="btn-border-only wishlist">
+                                            </Link>
+                                            <Link to="wishlist.html" className="btn-border-only wishlist">
                                                 <i className="fa-regular fa-heart" />
                                                 Wishlist
-                                            </a>
+                                            </Link>
                                             <div className="btn-border-only cart category-hover-header">
                                                 <i className="fa-sharp fa-regular fa-cart-shopping" />
                                                 <span className="text">My Cart</span>
@@ -574,11 +484,11 @@ function Header() {
                                                                 <img src="assets/images/shop/cart-1.png" alt="" />
                                                             </div>
                                                             <div className="details">
-                                                                <a href="shop-details.html">
+                                                                <Link to="shop-details.html">
                                                                     <h5 className="title">
                                                                         Foster Farms Breast Nuggets Shaped Chicken
                                                                     </h5>
-                                                                </a>
+                                                                </Link>
                                                                 <div className="number">
                                                                     1 <i className="fa-regular fa-x" />
                                                                     <span>$36.00</span>
@@ -595,11 +505,11 @@ function Header() {
                                                                 <img src="assets/images/shop/05.png" alt="" />
                                                             </div>
                                                             <div className="details">
-                                                                <a href="shop-details.html">
+                                                                <Link to="shop-details.html">
                                                                     <h5 className="title">
                                                                         Foster Farms Breast Nuggets Shaped Chicken
                                                                     </h5>
-                                                                </a>
+                                                                </Link>
                                                                 <div className="number">
                                                                     1 <i className="fa-regular fa-x" />
                                                                     <span>$36.00</span>
@@ -616,11 +526,11 @@ function Header() {
                                                                 <img src="assets/images/shop/04.png" alt="" />
                                                             </div>
                                                             <div className="details">
-                                                                <a href="shop-details.html">
+                                                                <Link to="shop-details.html">
                                                                     <h5 className="title">
                                                                         Foster Farms Breast Nuggets Shaped Chicken
                                                                     </h5>
-                                                                </a>
+                                                                </Link>
                                                                 <div className="number">
                                                                     1 <i className="fa-regular fa-x" />
                                                                     <span>$36.00</span>
@@ -655,19 +565,19 @@ function Header() {
                                                             </p>
                                                         </div>
                                                         <div className="button-wrapper d-flex align-items-center justify-content-between">
-                                                            <a href="cart.html" className="rts-btn btn-primary ">
+                                                            <Link to="cart.html" className="rts-btn btn-primary ">
                                                                 View Cart
-                                                            </a>
-                                                            <a
+                                                            </Link>
+                                                            <Link
                                                                 href="checkout.html"
                                                                 className="rts-btn btn-primary border-only"
                                                             >
                                                                 CheckOut
-                                                            </a>
+                                                            </Link>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <a href="cart.html" className="over_link" />
+                                                <Link to="cart.html" className="over_link" />
                                             </div>
                                         </div>
                                         <div className="actions-area">
@@ -759,189 +669,189 @@ function Header() {
                                 <nav className="nav-main mainmenu-nav mt--30">
                                     <ul className="mainmenu metismenu" id="mobile-menu-active">
                                         <li className="has-droupdown">
-                                            <a href="#" className="main">
+                                            <Link to="#" className="main">
                                                 Home
-                                            </a>
+                                            </Link>
                                             <ul className="submenu mm-collapse">
                                                 <li>
-                                                    <a className="mobile-menu-link" href="index.html">
+                                                    <Link className="mobile-menu-link" href="index.html">
                                                         Home One
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="index-two.html">
+                                                    <Link className="mobile-menu-link" href="index-two.html">
                                                         Home Two
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="index-three.html">
+                                                    <Link className="mobile-menu-link" href="index-three.html">
                                                         Home Three
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="index-four.html">
+                                                    <Link className="mobile-menu-link" href="index-four.html">
                                                         Home Four
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="index-five.html">
+                                                    <Link className="mobile-menu-link" href="index-five.html">
                                                         {" "}
                                                         Home Five
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="about.html" className="main">
+                                            <Link to="about.html" className="main">
                                                 About
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="has-droupdown">
-                                            <a href="#" className="main">
+                                            <Link to="#" className="main">
                                                 Pages
-                                            </a>
+                                            </Link>
                                             <ul className="submenu mm-collapse">
                                                 <li>
-                                                    <a className="mobile-menu-link" href="about.html">
+                                                    <Link className="mobile-menu-link" href="about.html">
                                                         About
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="faq.html">
+                                                    <Link className="mobile-menu-link" href="faq.html">
                                                         Faq's
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="invoice.html">
+                                                    <Link className="mobile-menu-link" href="invoice.html">
                                                         Invoice
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="contact.html">
+                                                    <Link className="mobile-menu-link" href="contact.html">
                                                         Contact
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="register.html">
+                                                    <Link className="mobile-menu-link" href="register.html">
                                                         Register
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="login.html">
+                                                    <Link className="mobile-menu-link" href="login.html">
                                                         Login
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="privacy-policy.html">
+                                                    <Link className="mobile-menu-link" href="privacy-policy.html">
                                                         Privacy Policy
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="cookies-policy.html">
+                                                    <Link className="mobile-menu-link" href="cookies-policy.html">
                                                         Cookies Policy
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="terms-condition.html">
+                                                    <Link className="mobile-menu-link" href="terms-condition.html">
                                                         Terms Condition
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a className="mobile-menu-link" href="404.html">
+                                                    <Link className="mobile-menu-link" href="404.html">
                                                         Error Page
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li className="has-droupdown">
-                                            <a href="#" className="main">
+                                            <Link to="#" className="main">
                                                 Shop
-                                            </a>
+                                            </Link>
                                             <ul className="submenu mm-collapse">
                                                 <li className="has-droupdown third-lvl">
-                                                    <a className="main" href="#">
+                                                    <Link className="main" href="#">
                                                         Shop Layout
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu-third-lvl mm-collapse">
                                                         <li>
-                                                            <a href="shop-grid-sidebar.html" />
+                                                            <Link to="shop-grid-sidebar.html" />
                                                             Shop Grid Sidebar
                                                         </li>
                                                         <li>
-                                                            <a href="shop-list-sidebar.html" />
+                                                            <Link to="shop-list-sidebar.html" />
                                                             Shop List Sidebar
                                                         </li>
                                                         <li>
-                                                            <a href="shop-grid-top-filter.html" />
+                                                            <Link to="shop-grid-top-filter.html" />
                                                             Shop Grid Top Filter
                                                         </li>
                                                         <li>
-                                                            <a href="shop-list-top-filter.html" />
+                                                            <Link to="shop-list-top-filter.html" />
                                                             Shop List Top Filter
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li className="has-droupdown third-lvl">
-                                                    <a className="main" href="#">
+                                                    <Link className="main" href="#">
                                                         Shop Details
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu-third-lvl mm-collapse">
                                                         <li>
-                                                            <a href="shop-details.html" />
+                                                            <Link to="shop-details.html" />
                                                             Shop Details
                                                         </li>
                                                         <li>
-                                                            <a href="shop-details-2.html" />
+                                                            <Link to="shop-details-2.html" />
                                                             Shop Details 2
                                                         </li>
                                                         <li>
-                                                            <a href="shop-grid-top-filter.html" />
+                                                            <Link to="shop-grid-top-filter.html" />
                                                             Shop Grid Top Filter
                                                         </li>
                                                         <li>
-                                                            <a href="shop-list-top-filter.html" />
+                                                            <Link to="shop-list-top-filter.html" />
                                                             Shop List Top Filter
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li className="has-droupdown third-lvl">
-                                                    <a className="main" href="#">
+                                                    <Link className="main" href="#">
                                                         Product Feature
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu-third-lvl mm-collapse">
                                                         <li>
-                                                            <a href="shop-details-variable.html" />
+                                                            <Link to="shop-details-variable.html" />
                                                             Shop Details Variable
                                                         </li>
                                                         <li>
-                                                            <a href="shop-details-affiliats.html" />
+                                                            <Link to="shop-details-affiliats.html" />
                                                             Shop Details Affiliats
                                                         </li>
                                                         <li>
-                                                            <a href="shop-details-group.html" />
+                                                            <Link to="shop-details-group.html" />
                                                             Shop Details Group
                                                         </li>
                                                         <li>
-                                                            <a href="shop-compare.html" />
+                                                            <Link to="shop-compare.html" />
                                                             Shop Compare
                                                         </li>
                                                     </ul>
                                                 </li>
                                                 <li className="has-droupdown third-lvl">
-                                                    <a className="main" href="#">
+                                                    <Link className="main" href="#">
                                                         Shop Others
-                                                    </a>
+                                                    </Link>
                                                     <ul className="submenu-third-lvl mm-collapse">
                                                         <li>
-                                                            <a href="cart.html" />
+                                                            <Link to="cart.html" />
                                                             Cart
                                                         </li>
                                                         <li>
-                                                            <a href="checkout.html" />
+                                                            <Link to="checkout.html" />
                                                             Checkout
                                                         </li>
                                                         <li>
-                                                            <a href="trackorder.html" />
+                                                            <Link to="trackorder.html" />
                                                             Trackorder
                                                         </li>
                                                     </ul>
@@ -949,37 +859,37 @@ function Header() {
                                             </ul>
                                         </li>
                                         <li className="has-droupdown">
-                                            <a href="#" className="main">
+                                            <Link to="#" className="main">
                                                 Blog
-                                            </a>
+                                            </Link>
                                             <ul className="submenu mm-collapse">
                                                 <li>
-                                                    <a className="mobile-menu-link" href="blog.html">
+                                                    <Link className="mobile-menu-link" href="blog.html">
                                                         Blog
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a
+                                                    <Link
                                                         className="mobile-menu-link"
                                                         href="blog-list-left-sidebar.html"
                                                     >
                                                         Blog Left Sidebar
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                                 <li>
-                                                    <a
+                                                    <Link
                                                         className="mobile-menu-link"
                                                         href="blog-list-right-sidebar.html"
                                                     >
                                                         Blog List Right Sidebar
-                                                    </a>
+                                                    </Link>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="contact.html" className="main">
+                                            <Link to="contact.html" className="main">
                                                 Contact Us
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </nav>
@@ -996,140 +906,140 @@ function Header() {
                             <div className="category-btn category-hover-header menu-category">
                                 <ul className="category-sub-menu metismenu" id="category-active-menu">
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/01.svg" alt="icons" />
                                             <span>Breakfast &amp; Dairy</span>
                                             <i className="fa-regular fa-plus" />
-                                        </a>
+                                        </Link>
                                         <ul className="submenu mm-collapse">
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Breakfast
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Dinner
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     {" "}
                                                     Pumking
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/02.svg" alt="icons" />
                                             <span>Meats &amp; Seafood</span>
                                             <i className="fa-regular fa-plus" />
-                                        </a>
+                                        </Link>
                                         <ul className="submenu mm-collapse">
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Breakfast
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Dinner
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     {" "}
                                                     Pumking
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/03.svg" alt="icons" />
                                             <span>Breads &amp; Bakery</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/04.svg" alt="icons" />
                                             <span>Chips &amp; Snacks</span>
                                             <i className="fa-regular fa-plus" />
-                                        </a>
+                                        </Link>
                                         <ul className="submenu mm-collapse">
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Breakfast
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Dinner
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     {" "}
                                                     Pumking
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/05.svg" alt="icons" />
                                             <span>Medical Healthcare</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/06.svg" alt="icons" />
                                             <span>Breads &amp; Bakery</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/07.svg" alt="icons" />
                                             <span>Biscuits &amp; Snacks</span>
                                             <i className="fa-regular fa-plus" />
-                                        </a>
+                                        </Link>
                                         <ul className="submenu mm-collapse">
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Breakfast
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     Dinner
-                                                </a>
+                                                </Link>
                                             </li>
                                             <li>
-                                                <a className="mobile-menu-link" href="#">
+                                                <Link className="mobile-menu-link" href="#">
                                                     {" "}
                                                     Pumking
-                                                </a>
+                                                </Link>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/08.svg" alt="icons" />
                                             <span>Frozen Foods</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/09.svg" alt="icons" />
                                             <span>Grocery &amp; Staples</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a href="#" className="menu-item">
+                                        <Link to="#" className="menu-item">
                                             <img src="assets/images/icons/10.svg" alt="icons" />
                                             <span>Other Items</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -1141,20 +1051,20 @@ function Header() {
                     <div className="contact-area">
                         <div className="phone">
                             <i className="fa-light fa-headset" />
-                            <a href="#">02345697871</a>
+                            <Link to="#">02345697871</Link>
                         </div>
                         <div className="phone">
                             <i className="fa-light fa-envelope" />
-                            <a href="#">02345697871</a>
+                            <Link to="#">02345697871</Link>
                         </div>
                     </div>
                     <div className="buton-area-bottom">
-                        <a href="login.html" className="rts-btn btn-primary">
+                        <Link to="login.html" className="rts-btn btn-primary">
                             Sign In
-                        </a>
-                        <a href="register.html" className="rts-btn btn-primary">
+                        </Link>
+                        <Link to="register.html" className="rts-btn btn-primary">
                             Sign Up
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 {/* button area wrapper end */}

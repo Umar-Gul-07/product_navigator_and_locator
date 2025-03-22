@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Product from "./include/Product";
+import api from "../Utils/Axios";
 
 function ProductList() {
     const [products, setProducts] = useState([]);
@@ -9,7 +9,7 @@ function ProductList() {
 
     useEffect(() => {
         // Fetch products from API
-        axios.get("http://127.0.0.1:8000/api/products/")  // Ensure this URL is correct
+        api.get("/api/products/")  // Ensure this URL is correct
             .then((response) => {
                 setProducts(response.data);  // Set API response data to state
                 setLoading(false);
@@ -51,7 +51,7 @@ function ProductList() {
                                     {/* Show message if no products are found */}
                                     {!loading && !error && products.length === 0 && (
                                         <div >
-                                        <p className="text-danger">No products available.</p>
+                                        <p className="text-danger mx-auto d-flex justify-content-center align-items-center">No products available.</p>
                                         </div>
 
                                     )}

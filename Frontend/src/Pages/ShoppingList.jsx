@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { Store } from "../Utils/Store";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function ShoppingList() {
     const { state, dispatch } = useContext(Store);
     const { Cart } = state;
+    const navigate = useNavigate()
 
     const updateQuantity = (item, newQuantity) => {
         if (newQuantity < 1) return;
@@ -85,7 +87,7 @@ function ShoppingList() {
                                                 <p>${(item.price * item.quantity).toFixed(2)}</p>
                                             </div>
                                             <div className="">
-                                            <button className="rts-btn btn-primary">Navigate</button>
+                                            <button className="rts-btn btn-primary"  onClick={() => navigate(`/store-map?category=${item.category}`)}>Navigate</button>
                                             </div>
                                             <div className="m-5">
                                             <button className="rts-btn btn-primary">Confirm</button>

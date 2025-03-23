@@ -175,11 +175,13 @@ function Product({ item }) {
                 }
                 .product-image {
                     width: 100%;
-                    height: auto;
+                    height: 200px; /* Fixed height */
+                    object-fit: cover; /* Ensures the image is contained within the box without distortion */
                     border-radius: 10px;
                 }
                 .quickview-image {
                     width: 100%;
+                    height: auto;
                     max-height: 250px;
                     object-fit: contain;
                 }

@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
 
 class Category(models.Model):
     """
@@ -36,14 +37,13 @@ class Product(models.Model):
 
 
 class ShoppingList(models.Model):
-    """
-    Represents a shopping list for each user.
-    """
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="shopping_lists")
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, 
+        on_delete=models.CASCADE, 
+        null=True,  # ✅ Allow user to be NULL
+        blank=True  # ✅ Allow empty user
+    )
     created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.user.username}'s Shopping List ({self.id})"
 
 
 class ShoppingListItem(models.Model):

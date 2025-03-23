@@ -23,19 +23,25 @@ function Login() {
         setLoading(true);
         setError(null);
         setSuccess(null);
-
+    
         try {
             const response = await api.post("/auth/login/", formData);
             setSuccess("Login successful! Redirecting...");
-            console.log(response)
+    
+            // Store user token in localStorage
+            localStorage.setItem("userToken", response.data.key);
+    
+            // Dispatch login event
             dispatch({ type: "UserLoggedIn", payload: response.data.key });
-            navigate("/")
+    
+            navigate("/");
         } catch (err) {
             setError("Invalid email or password. Please try again.");
         } finally {
             setLoading(false);
         }
     };
+    
 
     return (
         <>

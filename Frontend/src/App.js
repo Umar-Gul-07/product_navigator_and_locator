@@ -32,8 +32,8 @@ function App() {
                     <Route path='/branches' element={<Base><Branches/></Base>}/>
                     <Route path='/about' element={<Base><About/></Base>}/>
                     <Route path='/contact' element={<Base><Contact/></Base>}/>
-                    {/* <Route path='/shopping-list' element={<Base><Protected><ShoppingList/></Protected></Base>}/> */}
-                    <Route path='/shopping-list' element={<Base><ShoppingList/></Base>}/>
+                    <Route path='/shopping-list' element={<Base><Protected><ShoppingList/></Protected></Base>}/>
+                    {/* <Route path='/shopping-list' element={<Base><ShoppingList/></Base>}/> */}
                     <Route path="/store-map" element={<StoreMap />} />
 
 

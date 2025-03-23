@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useContext } from "react";
+import { Store } from "../../Utils/Store";
+import { toast } from "react-toastify";
+import api from "../../Utils/Axios";
+import { useNavigate } from "react-router-dom";
 
-function Product(item) {
-    const [products, setProducts] = useState([item]);
+function Product({ item }) {
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const { state, dispatch } = useContext(Store);
+    const { Cart } = state;
+    const navigate = useNavigate()
 
-
-    const handleQuickView = (product) => {
-        setSelectedProduct(product);
+    const handleQuickView = () => {
+        setSelectedProduct(item);
         setIsQuickViewOpen(true);
     };
 
@@ -19,71 +21,93 @@ function Product(item) {
         setSelectedProduct(null);
     };
 
-    return (
-        <div className="row">
-            {/* Show error message if API fails */}
-            {error && <p className="error-message">{error}</p>}
+    const addToCart = async () => {
+        try {
+            // const response = await api.get(`/check-stock/?product_id=${item.id}`);
+            const { in_stock, stock } =[1,1];
 
-            {/* Show loading message while fetching data */}
-            {loading ? (
-                <p>Loading products...</p>
-            ) : (
-                products.map((product) => (
-                    <div key={product.id} className="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <div className="single-shopping-card-one">
-                            {/* Image and Action Area Start */}
-                            <div className="image-and-action-area-wrapper">
-                                <a href={`/shop-details/${product.id}`} className="thumbnail-preview">
-                                    {product.discounts.length > 0 && (
-                                        <div className="badge">
-                                            <span>
-                                                {product.discounts[0].discount_value}% <br />
-                                                Off
-                                            </span>
-                                            <i className="fa-solid fa-bookmark" />
-                                        </div>
-                                    )}
-                                    <img
-                                        src={`http://localhost:8000${product.image}`} // Fix: Correct image path
-                                        alt={product.name}
-                                        className="product-image"
-                                    />
-                                </a>
-                                <div className="action-share-option">
-                                    <div
-                                        className="single-action openuptip cta-quickview product-details-popup-btn"
-                                        data-flow="up"
-                                        title="Quick View"
-                                        onClick={() => handleQuickView(product)}
-                                    >
-                                        <i className="fa-regular fa-eye" />
-                                    </div>
-                                </div>
-                            </div>
-                            {/* Image and Action Area End */}
-                            <div className="body-content">
-                                <a href={`/shop-details/${product.id}`}>
-                                    <h4 className="title">{product.name}</h4>
-                                </a>
-                                <span className="availability">
-                                    {product.stock > 0 ? "In Stock" : "Out of Stock"}
-                                </span>
-                                <div className="price-area">
-                                    <span className="current">${product.price}</span>
-                                </div>
-                                <div className="cart-counter-action">
-                                    <a href="#" className="rts-btn btn-primary radious-sm with-icon">
-                                        <div className="btn-text">Add To Shopping List</div>
-                                        <div className="arrow-icon">
-                                            <i className="fa-regular fa-cart-shopping" />
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+            // if (!in_stock) {
+            //     toast.error("Product is out of stock");
+            //     return;
+            // }
+
+            const currentCartItem = Cart.find((cartItem) => cartItem.id === item.id);
+            const currentQuantity = currentCartItem ? currentCartItem.quantity : 0;
+
+            if (currentQuantity + 1 > stock) {
+                toast.error("Product out of stock");
+                return;
+            }
+
+            toast.success("Product added to cart!");
+            dispatch({ type: "add-to-cart", payload: item });
+            localStorage.setItem("CartItem", JSON.stringify([...Cart, item]));
+        } catch (error) {
+            toast.error(error.message);
+        }
+    };
+
+    return (
+        <div className="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div className="single-shopping-card-one">
+                <div className="image-and-action-area-wrapper">
+                    <a href={`/shop-details/${item.id}`} className="thumbnail-preview">
+                        <img src={`${item.image}`} alt={item.name} className="product-image" />
+                    </a>
+                    <div className="action-share-option mb-3">
+                        <div
+                            className="single-action openuptip cta-quickview product-details-popup-btn"
+                            data-flow="up"
+                            title="Quick View"
+                            onClick={handleQuickView}
+                        >
+                            <i className="fa-regular fa-eye" />
                         </div>
                     </div>
-                ))
-            )}
+                </div>
+
+                <div className="body-content">
+                    <a href={`/shop-details/${item.id}`}>
+                        <h4 className="title">{item.name}</h4>
+                    </a>
+                    <span className="availability">
+                        {item.stock > 0 ? (
+                            <span className="text-success" style={{ fontFamily: "bolder" }}>In Stock</span>
+                        ) : (
+                            <span className="text-danger" style={{ fontFamily: "bolder" }}>Out of Stock</span>
+                        )}
+                    </span>
+                    <div className="price-area">
+                    {item.discount_active ? (
+                        <div className="bd-product__price">
+                            <span className="bd-product__old-price">
+                                <del className="text-danger">RS {item.price}</del>
+                            </span>
+                            <span className="bd-product__new-price">
+                                RS {item.discounted_price}
+                            </span>
+                        </div>
+                    ) : (
+                        <div className="bd-product__price">
+                            <span className="bd-product__new-price text-success">
+                                <strong>Rs {item.price}</strong>
+                            </span>
+                        </div>
+                    )}
+                    </div>
+                    <div className="cart-counter-action">
+                        <button className="rts-btn btn-primary radious-sm with-icon" onClick={addToCart}>
+                            <div className="btn-text">Add To Shopping List</div>
+                        
+                            <div className="arrow-icon">
+                                <i className="fa-regular fa-cart-shopping" />
+                            </div>
+                        </button>
+                        <button className="rts-btn btn-primary"  onClick={() => navigate(`/store-map?category=${item.category}`)}>Navigate</button>
+
+                    </div>
+                </div>
+            </div>
 
             {/* Quick View Modal */}
             {isQuickViewOpen && selectedProduct && (
@@ -93,18 +117,29 @@ function Product(item) {
                             &times;
                         </span>
                         <h2>{selectedProduct.name}</h2>
-                        <img
-                            src={`http://localhost:8000${selectedProduct.image}`}
-                            alt={selectedProduct.name}
-                            className="quickview-image"
-                        />
+                        <img src={selectedProduct.image} alt={selectedProduct.name} className="quickview-image" />
                         <p>
-                            <strong>Category:</strong> {selectedProduct.category.name}
+                            <strong>Category:</strong> {selectedProduct.category}
                         </p>
                         <p>
-                            <strong>Price:</strong> ${selectedProduct.price}
+                        {item.discount_active ? (
+                        <div className="bd-product__price">
+                            <span className="bd-product__old-price">
+                                <del className="text-danger">RS {item.price}</del>
+                            </span>
+                            <span className="bd-product__new-price">
+                                RS {item.discounted_price}
+                            </span>
+                        </div>
+                    ) : (
+                        <div className="bd-product__price">
+                            <span className="bd-product__new-price text-success">
+                                <strong>Rs {item.price}</strong>
+                            </span>
+                        </div>
+                    )}
                         </p>
-                        <button className="rts-btn btn-primary">Add to Cart</button>
+                        <button className="rts-btn btn-primary" onClick={addToCart}>Add to Cart</button>
                     </div>
                 </div>
             )}
@@ -147,12 +182,6 @@ function Product(item) {
                     width: 100%;
                     max-height: 250px;
                     object-fit: contain;
-                }
-                .error-message {
-                    color: red;
-                    font-weight: bold;
-                    text-align: center;
-                    margin-top: 20px;
                 }
             `}</style>
         </div>

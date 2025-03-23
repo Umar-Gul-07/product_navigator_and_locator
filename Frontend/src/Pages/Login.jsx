@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../Utils/Axios";
-
+import {Store} from "../Utils/Store"
 function Login() {
+    const { dispatch } = useContext(Store);
+
     const navigate = useNavigate()
 
     const [formData, setFormData] = useState({ email: "", password: "" });
@@ -26,6 +27,8 @@ function Login() {
         try {
             const response = await api.post("/auth/login/", formData);
             setSuccess("Login successful! Redirecting...");
+            console.log(response)
+            dispatch({ type: "UserLoggedIn", payload: response.data.key });
             navigate("/")
         } catch (err) {
             setError("Invalid email or password. Please try again.");

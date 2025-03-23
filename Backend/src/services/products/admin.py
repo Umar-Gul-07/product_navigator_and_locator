@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, Discount, ShoppingList, ShoppingListItem, StoreLocation, ProductLocation
+from .models import Category, Product, ShoppingList, ShoppingListItem, StoreLocation, ProductLocation
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -8,15 +8,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'price', 'stock')
+    list_display = ('name', 'category', 'price', 'stock', 'discount_percentage', 'discount_active','featured_product')
     search_fields = ('name',)
     list_filter = ('category',)
-
-@admin.register(Discount)
-class DiscountAdmin(admin.ModelAdmin):
-    list_display = ('product', 'discount_type', 'min_quantity', 'discount_value', 'free_product')
-    list_filter = ('discount_type',)
-    search_fields = ('product__name',)
 
 @admin.register(ShoppingList)
 class ShoppingListAdmin(admin.ModelAdmin):

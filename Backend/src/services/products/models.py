@@ -20,30 +20,19 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField(default=0)
     image = models.ImageField(upload_to='product_images/', blank=True, null=True)
+    discount_percentage = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)
+    discount_active = models.BooleanField(default=False)
+    featured_product = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
-
-
-class Discount(models.Model):
-    """
-    Stores discount information, such as Buy X Get Y Free or Percentage Off.
-    """
-    DISCOUNT_TYPES = [
-        ('BUY_X_GET_Y', 'Buy X Get Y Free'),
-        ('PERCENT_OFF', 'Percentage Off'),
-    ]
     
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="discounts")
-    discount_type = models.CharField(max_length=20, choices=DISCOUNT_TYPES)
-    min_quantity = models.IntegerField(default=1)
-    discount_value = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, 
-                                         help_text="Discount percentage (e.g., 10 for 10%)")
-    free_product = models.ForeignKey(Product, null=True, blank=True, on_delete=models.SET_NULL, 
-                                     related_name="free_product", help_text="Applicable for Buy X Get Y Free")
-
-    def __str__(self):
-        return f"{self.product.name} - {self.get_discount_type_display()}"
+    def get_discounted_price(self):
+        """Calculate the price after discount, if applicable."""
+        if self.discount_active and self.discount_percentage:
+            discount_amount = (self.price * self.discount_percentage) / 100
+            return self.price - discount_amount
+        return self.price
 
 
 class ShoppingList(models.Model):
@@ -80,13 +69,12 @@ class StoreLocation(models.Model):
 
 
 class ProductLocation(models.Model):
-    """
-    Maps each product to a specific store location (aisle & section).
-    """
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="locations")
     store_location = models.ForeignKey(StoreLocation, on_delete=models.CASCADE)
     aisle_number = models.IntegerField()
     section = models.CharField(max_length=10, blank=True, null=True)  # Example: A, B, C
+    latitude = models.FloatField()  # Needed for map navigation
+    longitude = models.FloatField()  # Needed for map navigation
 
     def __str__(self):
         return f"{self.product.name} → {self.store_location.name} (Aisle {self.aisle_number}, Section {self.section})"

@@ -1,6 +1,18 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Store } from "../../Utils/Store";
 
 function Header() {
+    const { state, dispatch } = useContext(Store)
+    const { UserInfo } = state
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        dispatch({ type: "ClearUserInfo" });
+        localStorage.removeItem("UserInfo");
+        navigate("/")
+        // window.location.href = "/login";
+    };
     return (
         <>
             <div className="rts-header-one-area-one">
@@ -87,155 +99,7 @@ function Header() {
                                         />
                                     </Link>
                                     <div className="category-search-wrapper">
-                                        <div className="category-btn category-hover-header">
-                                            <img
-                                                className="parent"
-                                                src="assets/images/icons/bar-1.svg"
-                                                alt="icons"
-                                            />
-                                            <span>Categories</span>
-                                            <ul
-                                                className="category-sub-menu metismenu"
-                                                id="category-active-four"
-                                            >
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/01.svg" alt="icons" />
-                                                        <span>Breakfast &amp; Dairy</span>
-                                                        <i className="fa-regular fa-plus" />
-                                                    </Link>
-                                                    <ul className="submenu mm-collapse">
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Breakfast
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Dinner
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                {" "}
-                                                                Pumking
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/02.svg" alt="icons" />
-                                                        <span>Meats &amp; Seafood</span>
-                                                        <i className="fa-regular fa-plus" />
-                                                    </Link>
-                                                    <ul className="submenu mm-collapse">
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Breakfast
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Dinner
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                {" "}
-                                                                Pumking
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/03.svg" alt="icons" />
-                                                        <span>Breads &amp; Bakery</span>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/04.svg" alt="icons" />
-                                                        <span>Chips &amp; Snacks</span>
-                                                        <i className="fa-regular fa-plus" />
-                                                    </Link>
-                                                    <ul className="submenu mm-collapse">
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Breakfast
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Dinner
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                {" "}
-                                                                Pumking
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/05.svg" alt="icons" />
-                                                        <span>Medical Healthcare</span>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/06.svg" alt="icons" />
-                                                        <span>Breads &amp; Bakery</span>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/07.svg" alt="icons" />
-                                                        <span>Biscuits &amp; Snacks</span>
-                                                        <i className="fa-regular fa-plus" />
-                                                    </Link>
-                                                    <ul className="submenu mm-collapse">
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Breakfast
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                Dinner
-                                                            </Link>
-                                                        </li>
-                                                        <li>
-                                                            <Link className="mobile-menu-link" href="#">
-                                                                {" "}
-                                                                Pumking
-                                                            </Link>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/08.svg" alt="icons" />
-                                                        <span>Frozen Foods</span>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/09.svg" alt="icons" />
-                                                        <span>Grocery &amp; Staples</span>
-                                                    </Link>
-                                                </li>
-                                                <li>
-                                                    <Link to="#" className="menu-item">
-                                                        <img src="assets/images/icons/10.svg" alt="icons" />
-                                                        <span>Other Items</span>
-                                                    </Link>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                       
                                         <form action="#" className="search-header">
                                             <input
                                                 type="text"
@@ -286,28 +150,58 @@ function Header() {
                                         </div>
                                     </div>
                                     <div className="accont-wishlist-cart-area-header">
-                                        <Link to="/login" className="btn-border-only account">
-                                            <i className="fa-light fa-user" />
-                                            <span>Sign in</span>
-                                        </Link>
+                                        {UserInfo ?
+                                            <>
+                                                <div className="dropdown">
+                                                    {/* Account Button */}
+                                                    <button
+                                                        className="btn btn-border-only account dropdown-toggle"
+                                                        type="button"
+                                                        data-bs-toggle="dropdown"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <i className="fa-light fa-user" />
+                                                        <span style={{ fontSize: "15px" }}> Account</span>
+                                                    </button>
 
-                                        <Link to="/registration" className="btn-border-only account">
-                                            <i className="fa-light fa-user" />
-                                            <span>Sign up</span>
-                                        </Link>
-                                        <Link to="/" className="btn-border-only account">
-                                            <i className="fa-light fa-user" />
-                                            <span>Account</span>
-                                        </Link>
+                                                    {/* Dropdown Menu */}
+                                                    <ul className="dropdown-menu">
 
-                                        <div className="btn-border-only cart category-hover-header">
-                                            <i className="fa-sharp fa-regular fa-cart-shopping" />
-                                            <Link to="/shoping-list">
-                                            <span className="text">My Shopping List</span>
-                                            </Link>
-                                            <span className="number">2</span>
-                                            <Link to="/shopping-list" className="over_link" />
-                                        </div>
+                                                        <li>
+                                                            <Link className="dropdown-item" to="/settings">History</Link>
+                                                        </li>
+                                                        <li>
+                                                            <button className="dropdown-item text-danger" onClick={handleLogout}>
+                                                                Logout
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <Link to="/shopping-list">
+                                                </Link>
+                                                <div className="btn-border-only cart category-hover-header">
+                                                    <i className="fa-sharp fa-regular fa-cart-shopping" />
+
+                                                    <span className="number">2</span>
+                                                    <Link to="/shopping-list" className="over_link" />
+                                                    <span className="text">Shopping List</span>
+                                                </div>
+                                            </>
+                                            :
+                                            <>
+                                                <Link to="/login" className="btn-border-only account">
+                                                    <i className="fa-light fa-user" />
+                                                    <span>Sign in</span>
+                                                </Link>
+
+                                                <Link to="/registration" className="btn-border-only account">
+                                                    <i className="fa-light fa-user" />
+                                                    <span>Sign up</span>
+                                                </Link>
+                                            </>
+                                        }
+
+
                                     </div>
                                 </div>
                             </div>
@@ -328,7 +222,7 @@ function Header() {
                                                     </Link>
 
                                                 </li>
-                                               
+
                                                 <li className="parent with-megamenu">
                                                     <Link to="/product-list">ProductList</Link>
 

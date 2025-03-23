@@ -2,11 +2,11 @@ import React, { useContext } from 'react'
 import { Navigate } from "react-router-dom"
 import { Store } from '../Utils/Store'
 
-function AttorneyProtected({children}) {
+function Protected({children}) {
     const {state}=useContext(Store)
     const {UserInfo}=state
 
-    return  UserInfo && UserInfo.isLawyer ?  children : <Navigate to='/login'/>
+    return  UserInfo && UserInfo ?  children : <Navigate to='/login'/>
 }
 
-export default AttorneyProtected
+export default Protected

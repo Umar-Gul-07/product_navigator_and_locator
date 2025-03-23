@@ -49,9 +49,16 @@ function reducer(state, action) {
             return {...state, Cart: newCart};
         }
 
-        case "update-cart":
-            // Update the cart directly with the new quantity values
-            return {...state, Cart: action.payload};
+        case "update-cart-quantity": {
+            const { id, quantity } = action.payload;
+            
+            const newCart = state.Cart.map(item =>
+                item.id === id ? { ...item, quantity, total: parseFloat(item.price) * quantity } : item
+            );
+        
+            localStorage.setItem("CartItem", JSON.stringify(newCart));
+            return { ...state, Cart: newCart };
+        }
 
         case "remove-from-cart":
             const updatedCart = state.Cart.filter((item) => item.id !== action.payload.id);

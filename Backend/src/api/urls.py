@@ -7,7 +7,8 @@ from .views import (
     StoreLocationListAPIView,
     get_category_location,
     CategoryListView,
-    save_shopping_list
+    save_shopping_list,
+    UserShoppingListView
 )
 
 urlpatterns = [
@@ -31,4 +32,6 @@ urlpatterns = [
 
     # 🛒 Shopping List Routes
     path("save-shopping-list/", save_shopping_list, name="save-shopping-list"),
+    path("history-list/", UserShoppingListView.as_view(), name="user-shopping-list"),
+
 ]

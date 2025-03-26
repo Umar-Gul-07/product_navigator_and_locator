@@ -12,6 +12,7 @@ import Registration from "./Pages/Registration";
 import Login from "./Pages/Login";
 import Protected from "./Security/Protected";
 import StoreMap from "./Pages/include/StoreMap";
+import History from "./Pages/History";
  
 
 
@@ -33,6 +34,7 @@ function App() {
                     <Route path='/about' element={<Base><About/></Base>}/>
                     <Route path='/contact' element={<Base><Contact/></Base>}/>
                     <Route path='/shopping-list' element={<Base><Protected><ShoppingList/></Protected></Base>}/>
+                    <Route path='/history' element={<Base><Protected><History/></Protected></Base>}/>
                     {/* <Route path='/shopping-list' element={<Base><ShoppingList/></Base>}/> */}
                     <Route path="/store-map" element={<StoreMap />} />
 

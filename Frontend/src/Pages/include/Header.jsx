@@ -5,6 +5,7 @@ import { Store } from "../../Utils/Store";
 function Header() {
     const { state, dispatch } = useContext(Store)
     const { UserInfo } = state
+    console.log(UserInfo)
     const navigate = useNavigate()
 
     const handleLogout = () => {
@@ -24,7 +25,7 @@ function Header() {
                                     <div className="nav-sm-left">
                                         <ul className="nav-h_top" >
                                             <li>
-                                                <Link to="about.html" className="text-white">About Us</Link>
+                                                <Link to="/about" className="text-white">About Us</Link>
                                             </li>
 
 
@@ -76,7 +77,7 @@ function Header() {
                                                 </ul>
                                             </li>
                                             <li>
-                                                <Link to="trackorder.html" className="text-white">Track Order</Link>
+                                                <Link to="/" className="text-white">Track Order</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -168,7 +169,7 @@ function Header() {
                                                     <ul className="dropdown-menu">
 
                                                         <li>
-                                                            <Link className="dropdown-item" to="/settings">History</Link>
+                                                            <Link className="dropdown-item" to="/history">History</Link>
                                                         </li>
                                                         <li>
                                                             <button className="dropdown-item text-danger" onClick={handleLogout}>
@@ -182,7 +183,6 @@ function Header() {
                                                 <div className="btn-border-only cart category-hover-header">
                                                     <i className="fa-sharp fa-regular fa-cart-shopping" />
 
-                                                    <span className="number">2</span>
                                                     <Link to="/shopping-list" className="over_link" />
                                                     <span className="text">Shopping List</span>
                                                 </div>

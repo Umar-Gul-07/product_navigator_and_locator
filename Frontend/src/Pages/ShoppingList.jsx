@@ -53,25 +53,28 @@ function ShoppingList() {
             toast.error("You need to log in first!");
             return;
         }
-
+    
         try {
             const response = await fetch("http://localhost:8000/save-shopping-list/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": `Token ${UserInfo}`,  // ✅ Send user token
                 },
                 body: JSON.stringify({
-                    user_id: UserInfo.id,  // Send user ID from Store
                     items: Cart.map(item => ({
                         product_id: item.id,
                         quantity: item.quantity
                     }))
                 }),
             });
-
-            if (!response.ok) throw new Error("Failed to save shopping list");
-
-            dispatch({ type: "clear-cart" }); // Clear cart after saving
+    
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || "Failed to save shopping list");
+            }
+    
+            dispatch({ type: "clear-cart" }); // ✅ Clear cart after saving
             toast.success("Shopping list confirmed!");
         } catch (error) {
             toast.error(error.message);
@@ -148,9 +151,10 @@ function ShoppingList() {
                                             <div className="popup-container" style={popupStyle}>
                                                 <div className="popup-content">
                                                     <h2>Special Offer!</h2>
-                                                    <p>Add one more product to get one free!</p>
+                                                    <p>Add one more product to get</p>
+                                                    <p style={{fontSize:"20px",color:"red"}}> 1 FREE</p>
                                                     <button
-                                                        className="popup-close-btn"
+                                                        className="popup-close-btn my-5"
                                                         style={closeButtonStyle}
                                                         onClick={() => setPopupProductId(null)}
                                                     >
@@ -183,7 +187,7 @@ const popupStyle = {
 };
 
 const closeButtonStyle = {
-    backgroundColor: "#007bff",
+    backgroundColor: "#629D23",
     color: "white",
     border: "none",
     borderRadius: "5px",

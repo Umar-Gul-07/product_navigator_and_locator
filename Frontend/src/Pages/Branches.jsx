@@ -83,12 +83,7 @@ function Branches() {
                                                             <i className="fa-solid fa-phone-volume" />
                                                             <p>{branch.phone}</p>
                                                         </div>
-                                                        <a href="#" className="rts-btn btn-primary radious-sm with-icon">
-                                                            <div className="btn-text">Visit Store</div>
-                                                            <div className="arrow-icon">
-                                                                <i className="fa-light fa-arrow-right" />
-                                                            </div>
-                                                        </a>
+                                                      
                                                     </div>
                                                 </div>
                                             </div>

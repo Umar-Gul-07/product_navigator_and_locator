@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from ..core.models import ContactMessage, Branch
+from ..core.models import ContactMessage
 from ..services.products.models import (
-    Product, StoreLocation, ProductLocation, Category, ShoppingList, ShoppingListItem
+    Product, StoreLocation, ProductLocation,Branch, Category, ShoppingList, ShoppingListItem
 )
 
 class ContactMessageSerializer(serializers.ModelSerializer):

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../Utils/Axios";
+import { toast } from "react-toastify";
 
 function Registration() {
     const navigate = useNavigate()
@@ -36,14 +37,42 @@ function Registration() {
         try {
             const response = await api.post("/auth/registration/", formData);
             setSuccess("Registration successful! Redirecting...");
-            navigate("/login")
-            
+            toast.success("Registered");
+            navigate("/login");
         } catch (err) {
-            setError("Registration failed. Please check your details.");
+            console.error(err);
+
+            // Default fallback error
+            let message = "Registration failed. Please check your details.";
+
+            // If server responded with error details
+            if (err.response) {
+                if (err.response.data) {
+                    const data = err.response.data;
+
+                    // Handle object of field errors
+                    if (typeof data === 'object') {
+                        message = Object.values(data)
+                            .flat()
+                            .join(" ");
+                    } else if (typeof data === 'string') {
+                        message = data;
+                    }
+                } else if (err.response.status === 400) {
+                    message = "Bad request. Please verify your inputs.";
+                }
+            } else if (err.request) {
+                message = "No response from server. Please try again later.";
+            } else {
+                message = "An unexpected error occurred.";
+            }
+
+            setError(message);
         } finally {
             setLoading(false);
         }
     };
+
 
     return (
         <>
@@ -85,46 +114,46 @@ function Registration() {
                                 <form className="registration-form" onSubmit={handleSubmit}>
                                     <div className="input-wrapper">
                                         <label htmlFor="username">Username*</label>
-                                        <input 
-                                            type="text" 
-                                            id="username" 
-                                            name="username" 
-                                            value={formData.username} 
-                                            onChange={handleChange} 
-                                            required 
+                                        <input
+                                            type="text"
+                                            id="username"
+                                            name="username"
+                                            value={formData.username}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
                                     <div className="input-wrapper">
                                         <label htmlFor="email">Email*</label>
-                                        <input 
-                                            type="email" 
-                                            id="email" 
-                                            name="email" 
-                                            value={formData.email} 
-                                            onChange={handleChange} 
-                                            required 
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
                                     <div className="input-wrapper">
                                         <label htmlFor="password1">Password*</label>
-                                        <input 
-                                            type="password" 
-                                            id="password1" 
-                                            name="password1" 
-                                            value={formData.password1} 
-                                            onChange={handleChange} 
-                                            required 
+                                        <input
+                                            type="password"
+                                            id="password1"
+                                            name="password1"
+                                            value={formData.password1}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
                                     <div className="input-wrapper">
                                         <label htmlFor="password2">Confirm Password*</label>
-                                        <input 
-                                            type="password" 
-                                            id="password2" 
-                                            name="password2" 
-                                            value={formData.password2} 
-                                            onChange={handleChange} 
-                                            required 
+                                        <input
+                                            type="password"
+                                            id="password2"
+                                            name="password2"
+                                            value={formData.password2}
+                                            onChange={handleChange}
+                                            required
                                         />
                                     </div>
                                     <button className="rts-btn btn-primary" type="submit" disabled={loading}>

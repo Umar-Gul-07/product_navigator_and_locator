@@ -8,7 +8,7 @@ from .views import (
     get_category_location,
     CategoryListView,
     save_shopping_list,
-    UserShoppingListView
+    UserShoppingListView,get_categories
 )
 
 urlpatterns = [
@@ -33,5 +33,8 @@ urlpatterns = [
     # 🛒 Shopping List Routes
     path("save-shopping-list/", save_shopping_list, name="save-shopping-list"),
     path("history-list/", UserShoppingListView.as_view(), name="user-shopping-list"),
+
+    path('admin/get-categories/',get_categories, name='get_categories'),
+
 
 ]

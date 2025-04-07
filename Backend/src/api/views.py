@@ -10,8 +10,8 @@ from django.contrib.auth.models import User
 from rest_framework.views import APIView
 
 from ..core.forms import ContactForm
-from ..core.models import ContactMessage, Branch
-from ..services.products.models import Product, StoreLocation, ProductLocation, Category, ShoppingList, ShoppingListItem
+from ..core.models import ContactMessage
+from ..services.products.models import Product,Branch, StoreLocation, ProductLocation, Category, ShoppingList, ShoppingListItem
 from .serializers import (
     ContactMessageSerializer, ProductSerializer, BranchSerializer,
     StoreLocationSerializer,  CategorySerializer,ShoppingListSerializer
@@ -172,3 +172,9 @@ class UserShoppingListView(APIView):
             })
 
         return Response(data, status=200)
+
+
+def get_categories(request):
+    branch_id = request.GET.get('branch_id')
+    categories = Category.objects.filter(branches__id=branch_id).values('id', 'name')
+    return JsonResponse(list(categories), safe=False)

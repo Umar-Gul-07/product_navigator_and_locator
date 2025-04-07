@@ -2,21 +2,28 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
 
+# models.py
 class Category(models.Model):
-    """
-    Stores product categories such as Dairy, Snacks, Beverages, etc.
-    """
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=255)
+
+
+class Branch(models.Model):
+    name = models.CharField(max_length=255, unique=True)
+    address = models.TextField()
+    phone = models.CharField(max_length=20, unique=True)
+    rating = models.DecimalField(max_digits=3, decimal_places=2, default=0.0)
+    status = models.CharField(max_length=10, choices=[('Open', 'Open'), ('Closed', 'Closed')], default='Closed')
+    image = models.ImageField(upload_to='branch_images/', blank=True, null=True)
+
+    # 👇 New field to associate categories with a branch
+    categories = models.ManyToManyField('Category')  # Many-to-many relation to Category
 
     def __str__(self):
         return self.name
 
-
 class Product(models.Model):
-    """
-    Stores product details such as name, category, price, stock, and image.
-    """
     name = models.CharField(max_length=255, unique=True)
+    branch = models.ForeignKey(Branch, on_delete=models.CASCADE, related_name="products")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="products")
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock = models.IntegerField(default=0)
@@ -29,11 +36,11 @@ class Product(models.Model):
         return self.name
     
     def get_discounted_price(self):
-        """Calculate the price after discount, if applicable."""
         if self.discount_active and self.discount_percentage:
             discount_amount = (self.price * self.discount_percentage) / 100
             return self.price - discount_amount
         return self.price
+
 
 
 class ShoppingList(models.Model):
@@ -78,3 +85,6 @@ class ProductLocation(models.Model):
 
     def __str__(self):
         return f"{self.product.name} → {self.store_location.name} (Aisle {self.aisle_number}, Section {self.section})"
+
+
+

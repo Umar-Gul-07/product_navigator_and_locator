@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, ShoppingList, ShoppingListItem, StoreLocation, ProductLocation
+from .models import Category, Product, ShoppingList, ShoppingListItem, StoreLocation, ProductLocation,Branch
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
@@ -31,3 +31,11 @@ class StoreLocationAdmin(admin.ModelAdmin):
 class ProductLocationAdmin(admin.ModelAdmin):
     list_display = ('product', 'store_location', 'aisle_number', 'section')
     search_fields = ('product__name', 'store_location__name')
+
+
+
+@admin.register(Branch)
+class BranchAdmin(admin.ModelAdmin):
+    list_display = ('name', 'address', 'phone', 'rating', 'status')
+    search_fields = ('name', 'address', 'phone')
+    list_filter = ('status',)

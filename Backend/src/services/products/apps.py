@@ -7,5 +7,5 @@ class CoreConfig(AppConfig):
     verbose_plural = 'Products'
     default_auto_config = 'django.db.models.BigAutoField'
 
-    # def ready(self):
-    #     import src.core.signals
+    def ready(self):
+        import src.services.products.signals

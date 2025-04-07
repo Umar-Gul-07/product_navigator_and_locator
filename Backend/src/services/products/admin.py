@@ -36,6 +36,6 @@ class ProductLocationAdmin(admin.ModelAdmin):
 
 @admin.register(Branch)
 class BranchAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'phone', 'rating', 'status')
+    list_display = ('name', 'address', 'phone', 'status')
     search_fields = ('name', 'address', 'phone')
     list_filter = ('status',)

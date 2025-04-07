@@ -6,17 +6,16 @@ from django.conf import settings
 class Category(models.Model):
     name = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.name
+
 
 class Branch(models.Model):
     name = models.CharField(max_length=255, unique=True)
     address = models.TextField()
     phone = models.CharField(max_length=20, unique=True)
-    rating = models.DecimalField(max_digits=3, decimal_places=2, default=0.0)
     status = models.CharField(max_length=10, choices=[('Open', 'Open'), ('Closed', 'Closed')], default='Closed')
     image = models.ImageField(upload_to='branch_images/', blank=True, null=True)
-
-    # 👇 New field to associate categories with a branch
-    categories = models.ManyToManyField('Category')  # Many-to-many relation to Category
 
     def __str__(self):
         return self.name

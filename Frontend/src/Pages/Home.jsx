@@ -65,7 +65,7 @@ function Home() {
                                 </div>
                                 <div className="content">
                                     <h4 className="title">Wide Assortment</h4>
-                                    <span>Orders $50 or more</span>
+                                    <span>Orders €50 or more</span>
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,7 @@ function Home() {
                                 </div>
                                 <div className="content">
                                     <h4 className="title">Easy Return Policy</h4>
-                                    <span>Orders $50 or more</span>
+                                    <span>Orders €50 or more</span>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ function Home() {
                                 </div>
                                 <div className="content">
                                     <h4 className="title">Best Prices &amp; Offers</h4>
-                                    <span>Orders $50 or more</span>
+                                    <span>Orders €50 or more</span>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +175,7 @@ function Home() {
                                 </div>
                                 <div className="content">
                                     <h4 className="title">Support 24/7</h4>
-                                    <span>Orders $50 or more</span>
+                                    <span>Orders €50 or more</span>
                                 </div>
                             </div>
                         </div>
@@ -217,7 +217,7 @@ function Home() {
                                 </div>
                                 <div className="content">
                                     <h4 className="title">Best Prices &amp; Offers</h4>
-                                    <span>Orders $50 or more</span>
+                                    <span>Orders €50 or more</span>
                                 </div>
                             </div>
                         </div>
@@ -257,16 +257,16 @@ function Home() {
                                                             {item.discount_active ? (
                                                                 <div className="bd-product__price">
                                                                     <span className="bd-product__old-price">
-                                                                        <del className="text-danger"><strong> Rs {item.price} </strong></del>
+                                                                        <del className="text-danger"><strong> € {item.price} </strong></del>
                                                                     </span>
                                                                     <span className="bd-product__new-price">
-                                                                        <strong> Rs {item.discounted_price}</strong>
+                                                                        <strong> € {item.discounted_price}</strong>
                                                                     </span>
                                                                 </div>
                                                             ) : (
                                                                 <div className="bd-product__price">
                                                                     <span className="bd-product__new-price text-success">
-                                                                        <strong>Rs {item.price}</strong>
+                                                                        <strong>€ {item.price}</strong>
                                                                     </span>
                                                                 </div>
                                                             )}
@@ -306,7 +306,7 @@ function Home() {
                                                 </h4>
                                                 <div className="price-area">
                                                     <span>Only</span>
-                                                    <h4 className="title">$15.00</h4>
+                                                    <h4 className="title">€15.00</h4>
                                                 </div>
                                             </div>
                                         </a>
@@ -321,7 +321,7 @@ function Home() {
                                                 </h4>
                                                 <div className="price-area">
                                                     <span>Only</span>
-                                                    <h4 className="title">$15.00</h4>
+                                                    <h4 className="title">€15.00</h4>
                                                 </div>
                                             </div>
                                         </a>
@@ -351,16 +351,16 @@ function Home() {
                                                                     {item.discount_active ? (
                                                                         <div className="bd-product__price">
                                                                             <span className="bd-product__old-price">
-                                                                                <del className="text-danger"><strong> Rs {item.price} </strong></del>
+                                                                                <del className="text-danger"><strong> € {item.price} </strong></del>
                                                                             </span>
                                                                             <span className="bd-product__new-price">
-                                                                                <strong> Rs {item.discounted_price}</strong>
+                                                                                <strong> € {item.discounted_price}</strong>
                                                                             </span>
                                                                         </div>
                                                                     ) : (
                                                                         <div className="bd-product__price">
                                                                             <span className="bd-product__new-price text-success">
-                                                                                <strong>Rs {item.price}</strong>
+                                                                                <strong>€ {item.price}</strong>
                                                                             </span>
                                                                         </div>
                                                                     )}
@@ -507,16 +507,16 @@ function Home() {
                                                             {item.discount_active ? (
                                                                 <div className="bd-product__price">
                                                                     <span className="bd-product__old-price">
-                                                                        <del className="text-danger"><strong> Rs {item.price} </strong></del>
+                                                                        <del className="text-danger"><strong> € {item.price} </strong></del>
                                                                     </span>
                                                                     <span className="bd-product__new-price">
-                                                                        <strong> Rs {item.discounted_price}</strong>
+                                                                        <strong> € {item.discounted_price}</strong>
                                                                     </span>
                                                                 </div>
                                                             ) : (
                                                                 <div className="bd-product__price">
                                                                     <span className="bd-product__new-price text-success">
-                                                                        <strong>Rs {item.price}</strong>
+                                                                        <strong>€ {item.price}</strong>
                                                                     </span>
                                                                 </div>
                                                             )}

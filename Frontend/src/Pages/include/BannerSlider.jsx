@@ -44,7 +44,7 @@ const BannerSlider = () => {
                     <div className="swiper-slide">
                       <div className="banner-bg-image bg_image bg_one-banner two ptb--120">
                         <div className="banner-one-inner-content">
-                          <span className="pre">Get up to 30% off on your first $150 purchase</span>
+                          <span className="pre">Get up to 30% off on your first €150 purchase</span>
                           <h1 className="title">
                             Do not miss our amazing <br />
                             grocery deals
@@ -61,7 +61,7 @@ const BannerSlider = () => {
                     <div className="swiper-slide">
                       <div className="banner-bg-image bg_image bg_one-banner ptb--120">
                         <div className="banner-one-inner-content">
-                          <span className="pre">Get up to 30% off on your first $150 purchase</span>
+                          <span className="pre">Get up to 30% off on your first €150 purchase</span>
                           <h1 className="title">
                             Do not miss our amazing <br />
                             grocery deals

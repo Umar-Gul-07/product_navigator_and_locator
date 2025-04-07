@@ -7,6 +7,7 @@ import axios from "axios";
 const StoreMap = () => {
     const [searchParams] = useSearchParams();
     const categoryName = searchParams.get("category");
+    const branch = searchParams.get("branch");
 
     const [userLocation, setUserLocation] = useState(null);
     const [productLocation, setProductLocation] = useState(null);
@@ -20,28 +21,48 @@ const StoreMap = () => {
         [1000, 1000], 
     ];
 
-    // 📌 Category images (MUST match category names exactly)
-    const categoryImages = {
-        "Fresh": "/fresh.jpg",
-        "Dairy": "/dairy.jpg",
-        "Meat": "/meat.jpg",
-        "Bakery": "/bakery.jpg",
-        "Frozen": "/frozen.jpg",
-        "Pantry": "/pantry.jpg",
-        "Snacks": "/snacks.jpg",
-        "Canned": "/canned.jpg",
-        "Personalcare": "/personalcare.jpg",
-        "Spices": "/spices.jpg",
+    // 📌 Category images for Branch 1 and Branch 2
+    const categoryImages1 = {
+        "Spices": "/map-img/spices.png",
+        "Dairy": "/map-img/dairy.png",
+        "Meat": "/map-img/meat.png",
+        "Bakery": "/map-img/bakery.png",
+        "Frozen": "/map-img/frozen.png",
+        "Cereal": "/map-img/cereal.png",
+        "Choclates": "/map-img/choclates.png",
+        "Crisps": "/map-img/crisps.png",
+        "Flowers": "/map-img/flower.png",
+        "Fruits": "/map-img/fruits.png",
+        "Sweets": "/map-img/sweets.png",
+        "Toys": "/map-img/toys.png",
+        "Biscuit": "/map-img/biscuit.png",
+        "Electronics": "/map-img/electronics.png",
+    };
+    const categoryImages2 = {
+        "Spices": "/map-img/2spices.png",
+        "Dairy": "/map-img/2dairy.png",
+        "Bakery": "/map-img/2bakery.png",
+        "Frozen": "/map-img/2frozen.png",
+        "Cereal": "/map-img/2cereal.png",
+        "Choclates": "/map-img/choclates.png",
+        "Crisps": "/map-img/2crisps.png",
+        "Flowers": "/map-img/2flower.png",
+        "Fruits": "/map-img/2fruits.png",
+        "Sweets": "/map-img/2sweets.png",
+        "Toys": "/map-img/2toys.png",
+        "Biscuit": "/map-img/biscuit.png",
+        "Electronics": "/map-img/electronics.png",
+        "Clothes": "/map-img/2clothes.png",
     };
 
-    // ✅ Debugging: Log categoryName
-    console.log("Category from URL:", categoryName);
+    // Determine which categoryImages to use
+    let storeImage = "/map-img/1map-full.png"; // Default fallback image
 
-    // ✅ Fix: Trim whitespace and ensure exact match
-    const trimmedCategory = categoryName ? categoryName.trim() : "";
-    const storeImage = categoryImages[trimmedCategory] || "/Grocery.jpg";
-
-    console.log("Using store image:", storeImage);
+    if (branch === "1") {
+        storeImage = categoryImages1[categoryName] || categoryImages2[categoryName] || storeImage;
+    } else if (branch === "2") {
+        storeImage = categoryImages2[categoryName] || categoryImages1[categoryName] || storeImage;
+    }
 
     // 🌍 Track user location
     useEffect(() => {
@@ -131,7 +152,7 @@ const StoreMap = () => {
                 mapRef.current.flyTo([productY, productX], 0, { duration: 2 });
             }, 1000);
         }
-    }, [userLocation, productLocation, categoryName]);
+    }, [userLocation, productLocation, categoryName, branch]);
 
     return (
         <div style={{ textAlign: "center" }}>

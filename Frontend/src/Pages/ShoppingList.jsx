@@ -114,7 +114,7 @@ function ShoppingList() {
                                             </div>
                                         </div>
                                         <div className="price">
-                                            <p>${item.price}</p>
+                                            <p>€{item.price}</p>
                                         </div>
                                         <div className="quantity">
                                             <div className="quantity-edit d-flex align-items-center">
@@ -137,7 +137,7 @@ function ShoppingList() {
                                             </div>
                                         </div>
                                         <div className="subtotal">
-                                            <p>${(item.price * item.quantity).toFixed(2)}</p>
+                                            <p>€{(item.price * item.quantity).toFixed(2)}</p>
                                         </div>
                                         <div className="">
                                             <button className="rts-btn btn-primary" onClick={() => navigate(`/store-map?category=${item.category}`)}>Navigate</button>

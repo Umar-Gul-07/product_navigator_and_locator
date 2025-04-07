@@ -24,7 +24,7 @@ function Product({ item }) {
     const addToCart = async () => {
         try {
             // const response = await api.get(`/check-stock/?product_id=${item.id}`);
-            const { in_stock, stock } =[1,1];
+            const { in_stock, stock } = [1, 1];
 
             // if (!in_stock) {
             //     toast.error("Product is out of stock");
@@ -78,33 +78,37 @@ function Product({ item }) {
                         )}
                     </span>
                     <div className="price-area">
-                    {item.discount_active ? (
-                        <div className="bd-product__price">
-                            <span className="bd-product__old-price">
-                                <del className="text-danger">RS {item.price}</del>
-                            </span>
-                            <span className="bd-product__new-price">
-                                RS {item.discounted_price}
-                            </span>
-                        </div>
-                    ) : (
-                        <div className="bd-product__price">
-                            <span className="bd-product__new-price text-success">
-                                <strong>Rs {item.price}</strong>
-                            </span>
-                        </div>
-                    )}
+                        {item.discount_active ? (
+                            <div className="bd-product__price">
+                                <span className="bd-product__old-price">
+                                    <del className="text-danger">€ {item.price}</del>
+                                </span>
+                                <span className="bd-product__new-price">
+                                    € {item.discounted_price}
+                                </span>
+                            </div>
+                        ) : (
+                            <div className="bd-product__price">
+                                <span className="bd-product__new-price text-success">
+                                    <strong>€ {item.price}</strong>
+                                </span>
+                            </div>
+                        )}
                     </div>
                     <div className="cart-counter-action">
                         <button className="rts-btn btn-primary radious-sm with-icon" onClick={addToCart}>
                             <div className="btn-text">Add To Shopping List</div>
-                        
+
                             <div className="arrow-icon">
                                 <i className="fa-regular fa-cart-shopping" />
                             </div>
                         </button>
-                        <button className="rts-btn btn-primary"  onClick={() => navigate(`/store-map?category=${item.category}`)}>Navigate</button>
-
+                        <button
+                            className="rts-btn btn-primary"
+                            onClick={() => navigate(`/store-map?category=${item.category}&branch=${item.branch}`)}
+                        >
+                            Navigate
+                        </button>
                     </div>
                 </div>
             </div>
@@ -122,22 +126,22 @@ function Product({ item }) {
                             <strong>Category:</strong> {selectedProduct.category}
                         </p>
                         <p>
-                        {item.discount_active ? (
-                        <div className="bd-product__price">
-                            <span className="bd-product__old-price">
-                                <del className="text-danger">RS {item.price}</del>
-                            </span>
-                            <span className="bd-product__new-price">
-                                RS {item.discounted_price}
-                            </span>
-                        </div>
-                    ) : (
-                        <div className="bd-product__price">
-                            <span className="bd-product__new-price text-success">
-                                <strong>Rs {item.price}</strong>
-                            </span>
-                        </div>
-                    )}
+                            {item.discount_active ? (
+                                <div className="bd-product__price">
+                                    <span className="bd-product__old-price">
+                                        <del className="text-danger">€ {item.price}</del>
+                                    </span>
+                                    <span className="bd-product__new-price">
+                                        € {item.discounted_price}
+                                    </span>
+                                </div>
+                            ) : (
+                                <div className="bd-product__price">
+                                    <span className="bd-product__new-price text-success">
+                                        <strong>€ {item.price}</strong>
+                                    </span>
+                                </div>
+                            )}
                         </p>
                         <button className="rts-btn btn-primary" onClick={addToCart}>Add to Cart</button>
                     </div>

@@ -72,13 +72,13 @@ function History() {
                                             </div>
                                         </div>
                                         <div className="price">
-                                            <p>Rs {item.product?.price || "0.00"}</p>
+                                            <p>€ {item.product?.price || "0.00"}</p>
                                         </div>
                                         <div className="quantity">
                                             <p>{item.quantity || 0}</p>
                                         </div>
                                         <div className="subtotal">
-                                            <p>Rs {(item.product?.price * item.quantity || 0).toFixed(2)}</p>
+                                            <p>€ {(item.product?.price * item.quantity || 0).toFixed(2)}</p>
                                         </div>
                                        
                                     </div>

@@ -298,7 +298,7 @@ function Home() {
                             <div className="product-with-discount">
                                 <div className="row g-5">
                                     <div className="col-xl-4 col-lg-12">
-                                        <a href="shop-details.html" className="single-discount-with-bg">
+                                        <Link to="/product-list" className="single-discount-with-bg">
                                             <div className="inner-content">
                                                 <h4 className="title">
                                                     Alpro Organic Flavored <br />
@@ -309,9 +309,8 @@ function Home() {
                                                     <h4 className="title">€15.00</h4>
                                                 </div>
                                             </div>
-                                        </a>
-                                        <a
-                                            href="shop-details.html"
+                                        </Link>
+                                        <Link to="/product-list"
                                             className="single-discount-with-bg bg-2"
                                         >
                                             <div className="inner-content">
@@ -324,7 +323,7 @@ function Home() {
                                                     <h4 className="title">€15.00</h4>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="col-xl-8 col-lg-12">
                                         <div className="row">
@@ -333,19 +332,19 @@ function Home() {
 
                                                     <div className="col-lg-6">
                                                         <div className="single-shopping-card-one discount-offer">
-                                                            <a href="shop-details.html" className="thumbnail-preview">
+                                                            <Link to="/product-list" className="thumbnail-preview">
                                                                 <div className="badge">
 
                                                                     <i className="fa-solid fa-bookmark" />
                                                                 </div>
                                                                 <img src={item.image} alt="grocery" />
-                                                            </a>
+                                                            </Link>
                                                             <div className="body-content">
-                                                                <a href="shop-details.html">
+                                                                <Link to="/product-list">
                                                                     <h4 className="title">
                                                                         {item.name}
                                                                     </h4>
-                                                                </a>
+                                                                </Link>
                                                                 <span className="availability">{item.stock} Available</span>
                                                                 <div className="price-area">
                                                                     {item.discount_active ? (
@@ -387,14 +386,14 @@ function Home() {
                         <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="single-feature-card bg_image one">
                                 <div className="content-area">
-                                    <a href="shop-grid-sidebar.html" className="rts-btn btn-primary">
+                                    <Link to="/product-list" className="rts-btn btn-primary">
                                         Weekend Discount
-                                    </a>
+                                    </Link>
                                     <h3 className="title animated fadeIn">
                                         Drink Fresh Corn Juice <br />
                                         <span>Good Taste</span>
                                     </h3>
-                                    <a href="shop-grid-sidebar.html" className="shop-now-goshop-btn">
+                                    <Link to="/product-list" className="shop-now-goshop-btn">
                                         <span className="text">Shop Now</span>
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
@@ -402,21 +401,21 @@ function Home() {
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="single-feature-card bg_image two">
                                 <div className="content-area">
-                                    <a href="shop-grid-sidebar.html" className="rts-btn btn-primary">
+                                    <Link to="/product-list" className="rts-btn btn-primary">
                                         Weekend Discount
-                                    </a>
+                                    </Link>
                                     <h3 className="title animated fadeIn">
                                         Organic Lemon Flavored
                                         <span>Banana Chips</span>
                                     </h3>
-                                    <a href="shop-grid-sidebar.html" className="shop-now-goshop-btn">
+                                    <Link to="/product-list" className="shop-now-goshop-btn">
                                         <span className="text">Shop Now</span>
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
@@ -424,21 +423,21 @@ function Home() {
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="single-feature-card bg_image three">
                                 <div className="content-area">
-                                    <a href="shop-grid-sidebar.html" className="rts-btn btn-primary">
+                                    <Link to="/product-list" className="rts-btn btn-primary">
                                         Weekend Discount
-                                    </a>
+                                    </Link>
                                     <h3 className="title animated fadeIn">
                                         Nozes Pecanera Brasil
                                         <span>Chocolate Snacks</span>
                                     </h3>
-                                    <a href="shop-grid-sidebar.html" className="shop-now-goshop-btn">
+                                    <Link to="/product-list" className="shop-now-goshop-btn">
                                         <span className="text">Shop Now</span>
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
@@ -446,21 +445,21 @@ function Home() {
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-sm-12 col-12">
                             <div className="single-feature-card bg_image four">
                                 <div className="content-area">
-                                    <a href="shop-grid-sidebar.html" className="rts-btn btn-primary">
+                                    <Link to="/product-list" className="rts-btn btn-primary">
                                         Weekend Discount
-                                    </a>
+                                    </Link>
                                     <h3 className="title animated fadeIn">
                                         Strawberry Water Drinks
                                         <span>Flavors Awesome</span>
                                     </h3>
-                                    <a href="shop-grid-sidebar.html" className="shop-now-goshop-btn">
+                                    <Link to="/product-list" className="shop-now-goshop-btn">
                                         <span className="text">Shop Now</span>
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
@@ -468,7 +467,7 @@ function Home() {
                                         <div className="plus-icon">
                                             <i className="fa-sharp fa-regular fa-plus" />
                                         </div>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

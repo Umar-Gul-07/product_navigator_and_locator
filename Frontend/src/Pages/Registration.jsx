@@ -36,8 +36,8 @@ function Registration() {
 
         try {
             const response = await api.post("/auth/registration/", formData);
+            toast.success("Registered....");
             setSuccess("Registration successful! Redirecting...");
-            toast.success("Registered");
             navigate("/login");
         } catch (err) {
             console.error(err);

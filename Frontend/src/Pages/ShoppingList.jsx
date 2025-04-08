@@ -53,7 +53,7 @@ function ShoppingList() {
             toast.error("You need to log in first!");
             return;
         }
-    
+
         try {
             const response = await fetch("http://localhost:8000/save-shopping-list/", {
                 method: "POST",
@@ -68,12 +68,12 @@ function ShoppingList() {
                     }))
                 }),
             });
-    
+
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.error || "Failed to save shopping list");
             }
-    
+
             dispatch({ type: "clear-cart" }); // ✅ Clear cart after saving
             toast.success("Shopping list confirmed!");
         } catch (error) {
@@ -140,8 +140,12 @@ function ShoppingList() {
                                             <p>€{(item.price * item.quantity).toFixed(2)}</p>
                                         </div>
                                         <div className="">
-                                            <button className="rts-btn btn-primary" onClick={() => navigate(`/store-map?category=${item.category}`)}>Navigate</button>
-                                        </div>
+                                            <button
+                                                className="rts-btn btn-primary"
+                                                onClick={() => navigate(`/store-map?category=${item.category}&branch=${item.branch}`)}
+                                            >
+                                                Navigate
+                                            </button>                                        </div>
                                         <div className="m-5">
                                             <button className="rts-btn btn-primary" onClick={confirmShoppingList}>Confirm</button>
                                         </div>
@@ -152,7 +156,7 @@ function ShoppingList() {
                                                 <div className="popup-content">
                                                     <h2>Special Offer!</h2>
                                                     <p>Add one more product to get</p>
-                                                    <p style={{fontSize:"20px",color:"red"}}> 1 FREE</p>
+                                                    <p style={{ fontSize: "20px", color: "red" }}> 1 FREE</p>
                                                     <button
                                                         className="popup-close-btn my-5"
                                                         style={closeButtonStyle}

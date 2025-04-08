@@ -92,11 +92,12 @@ function Header() {
                         <div className="row">
                             <div className="col-lg-12">
                                 <div className="logo-search-category-wrapper">
-                                    <Link to="index.html" className="logo-area">
+                                    <Link to="/" className="logo-area">
                                         <img
-                                            src="assets/images/logo/logo-01.svg"
+                                            src="assets/images/logo/logo-01.png"
                                             alt="logo-main"
                                             className="logo"
+                                            width="150px"
                                         />
                                     </Link>
                                     <div className="category-search-wrapper">
@@ -258,11 +259,12 @@ function Header() {
                             </div>
                             <div className="col-lg-12">
                                 <div className="logo-search-category-wrapper after-md-device-header">
-                                    <Link to="index.html" className="logo-area">
+                                    <Link to="/" className="logo-area">
                                         <img
-                                            src="assets/images/logo/logo-01.svg"
+                                            src="assets/images/logo/logo-01.png"
                                             alt="logo-main"
                                             className="logo"
+                                            width="150px"
                                         />
                                     </Link>
 
